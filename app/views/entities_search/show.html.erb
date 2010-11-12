@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%= in_place_editor_field :entity, 'title'%>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @entity.description %>
+</p>
+
+<p>
+  <b>Icon uri:</b>
+  <%=h @entity.icon_uri %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @entity.location %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%=h @entity.lat %>
+</p>
+
+<p>
+  <b>Lng:</b>
+  <%=h @entity.lng %>
+</p>
+
+
+<%= link_to 'Edit', edit_entity_path(@entity) %> |
+<%= link_to 'Back', :action=>'index' %>

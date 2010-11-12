@@ -1,0 +1,36 @@
+<h1>Listing entities</h1>
+<% form_tag('javascript:void(0)') do %>
+  <%= text_field_tag 'search', @search %>
+  <%= observe_field :search,                     # <label id="code.search1"/>
+                    :frequency => 0.5,           # <label id="code.search2"/>
+                    :update    => 'ajaxWrapper', # <label id="code.search3"/>
+                    :before    => "$('spinner').show();"+visual_effect(:highlight, 'test'), # <label id="code.search5"/>
+                    :complete  => "Element.hide('spinner')", # <label id="code.search4"/>
+                    :url       => {:action=>'search', :only_path => false}, # <label id="code.search7"/>
+                    :with      => "'search=' + encodeURIComponent(value)" %> <!-- <label id="code.search6"/> -->
+<% end %>
+
+<% @entities.each do |@entity| %>
+    <%= in_place_editor_field :entity, 'title'%> |
+    <%=h @entity.title %> |
+    <%=h @entity.description %> |
+    <%=h @entity.icon_uri %> |
+    <%=h @entity.location %> |
+    <%=h @entity.lat %> |
+    <%=h @entity.lng %> |
+    <%= link_to 'Show', :action=> 'show', :id=>@entity %>
+    <%= link_to 'Edit', edit_entity_path(@entity) %>
+    <%= link_to 'Destroy', @entity, :confirm => 'Are you sure?', :method => :delete %>
+  <br/>
+<% end %>
+<%= link_to "puts @entity", :action=>"put_instance_variable_from_view" %>
+
+
+<div id="test">
+visual effect~
+</div>
+<%= link_to_remote 'testt', :before => visual_effect(:highlight, 'test')  %>
+
+<div id='ajaxWrapper'>
+  <% render :partial=>"search" %>
+</div>

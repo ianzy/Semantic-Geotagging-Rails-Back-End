@@ -1,0 +1,12 @@
+<h1>Editing resp</h1>
+
+<% form_for(@resp) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @resp %> |
+<%= link_to 'Back', resps_path %>

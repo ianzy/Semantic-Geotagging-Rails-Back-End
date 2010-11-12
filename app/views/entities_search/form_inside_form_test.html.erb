@@ -1,0 +1,46 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "form_inside_form_test.html" %>
+
+<form action="/entities_search/create_for_form" method="post" id="form_inside_form">
+  <div class="field-holder">
+    <input type="text" class="field" name="title" value="title" title="Street"/>
+  </div>
+  <div class="field-holder">
+    <input type="text" class="field" name="description" value="description" title="City"/>
+  </div>
+  <div class="field-holder">
+    <input type="text" class="field" name="icon" value="icon" title="State"/>
+  </div>
+
+  <div id="calculator">
+  <% form_remote_tag(:url=>{:action=>'ajax_method_for_form'}, :update=>'calculator') do %>
+    Lat: <%= text_field :entity, :lat %>
+    Lng: <%= text_field :entity, :lng %>
+    <%= submit_tag 'Calculate' %>
+  <% end %>
+  </div>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" />
+  <input type="submit" class="button" value="Submit"/>
+</form>
+
+
+<br/><br/><br/><br/><br/>
+<div id="observe_field_form">
+  <% form_tag(:url=>{:action=>'create_for_form'}, :update=>'calculator') do %>
+    Title: <%= text_field :entity, :title %>
+    <div class="field-holder">
+    <input type="text" class="field" name="title" value="title" title="Street"/>
+  </div>
+  <div class="field-holder">
+    <input type="text" class="field" name="description" value="description" title="City"/>
+  </div>
+    Lat: <%= text_field :entity, :lat %>
+    Lng: <%= text_field :entity, :lng %>
+    <%= submit_tag 'Calculate' %>
+  <% end %>
+  </div>

@@ -1,0 +1,2 @@
+module EntitiesSearchHelper
+end
