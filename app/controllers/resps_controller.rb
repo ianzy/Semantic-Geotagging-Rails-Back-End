@@ -1,3 +1,5 @@
+require 'base64'
+
 class RespsController < ApplicationController
   # GET /resps
   # GET /resps.xml
@@ -15,6 +17,7 @@ class RespsController < ApplicationController
   # GET /resps/1.xml
   def show
     @resp = Resp.find(params[:id])
+    
 
     respond_to do |format|
       format.html # show.html.erb

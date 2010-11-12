@@ -1,4 +1,5 @@
 require 'csv'
+require 'base64'
 
 class CvsController < ApplicationController
   def index
@@ -13,8 +14,8 @@ class CvsController < ApplicationController
        puts "#{row}"
        @output<<row
        time = row[2]+" "+row[3]
-       resp = Resp.new(:entity_id=>entity_id,:username=>row[1],:time=>time, :resp=>row[4],
-       :lang=>row[5],:image=>row[6],:source=>row[6],:location=>'',:lat=>row[8],:lng=>row[9])
+       resp = Resp.new(:entity_id=>entity_id,:username=>Base64::encode64(row[1]),:time=>Base64::encode64(time), :resp=>Base64::encode64(row[4]),
+       :lang=>Base64::encode64(row[5]),:image=>Base64::encode64(row[6]),:source=>Base64::encode64(row[6]),:location=>Base64::encode64(row[7]),:lat=>Base64::encode64(row[8]),:lng=>Base64::encode64(row[9]))
        if resp.save
          n=n+1
          if n%50 == 0
