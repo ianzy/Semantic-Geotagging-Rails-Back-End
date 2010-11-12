@@ -14,7 +14,7 @@ class CvsController < ApplicationController
        @output<<row
        time = row[2]+" "+row[3]
        resp = Resp.new(:entity_id=>entity_id,:username=>row[1],:time=>time, :resp=>row[4],
-       :lang=>row[5],:image=>row[6],:source=>row[6],:location=>row[7],:lat=>row[8],:lng=>row[9])
+       :lang=>row[5],:image=>row[6],:source=>row[6],:location=>'',:lat=>row[8],:lng=>row[9])
        if resp.save
          n=n+1
          if n%50 == 0
