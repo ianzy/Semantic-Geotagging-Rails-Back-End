@@ -1,0 +1,20 @@
+<h1>Listing comment_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @comment_categories.each do |comment_category| %>
+  <tr>
+    <td><%=h comment_category.name %></td>
+    <td><%= link_to 'Show', comment_category %></td>
+    <td><%= link_to 'Edit', edit_comment_category_path(comment_category) %></td>
+    <td><%= link_to 'Destroy', comment_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New comment_category', new_comment_category_path %>

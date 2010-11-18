@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :response_categories
+
+  map.resources :comment_categories
+
+  map.resources :comments
+
+  map.resources :icons
+
   map.resources :resps
 
   map.resources :responses

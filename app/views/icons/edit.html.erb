@@ -1,0 +1,20 @@
+<h1>Editing icon</h1>
+
+<% form_for(@icon) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @icon %> |
+<%= link_to 'Back', icons_path %>

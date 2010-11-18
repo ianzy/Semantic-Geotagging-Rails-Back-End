@@ -9,7 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101103052926) do
+ActiveRecord::Schema.define(:version => 20101114103155) do
+
+  create_table "comment_categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "entity_id"
+    t.integer  "category_id"
+    t.string   "image_url"
+    t.integer  "comment_id"
+    t.string   "type"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "entities", :force => true do |t|
     t.string   "title"
@@ -18,6 +36,19 @@ ActiveRecord::Schema.define(:version => 20101103052926) do
     t.string   "location"
     t.float    "lat"
     t.float    "lng"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "icons", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "response_categories", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

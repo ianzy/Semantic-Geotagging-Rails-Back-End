@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @comment.user_id %>
+</p>
+
+<p>
+  <b>Entity:</b>
+  <%=h @comment.entity_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @comment.category_id %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @comment.image_url %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @comment.comment_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @comment.type %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @comment.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
