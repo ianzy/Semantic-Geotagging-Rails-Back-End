@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Semantic Geotagging</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<%= stylesheet_link_tag 'style' %>
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+        <script type="text/javascript"
+            src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript">
+          function initialize() {
+            var latlng = new google.maps.LatLng(37.624123, -122.441361);
+            var myOptions = {
+              zoom: 14,
+              center: latlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+                myOptions);
+          }
+
+        </script>
+
+
+</head>
+<body onload="initialize()">
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <div id="cmudmi">
+      <h1 id="cmu">Carnegie Mellon University</h1>
+      <h1 id="dmi">Disaster Management Initiative</h1>
+    </div>
+      <div id="navigation">
+        <ul>
+          <li><a href="#" class="active"><span>Home</span></a></li>
+          <li><a href="#"><span>Entities</span></a></li>
+          <li><a href="#"><span>Responses</span></a></li>
+          <li><a href="#"><span>Map</span></a>
+
+          </li>
+          <li><a href="#"><span>Contact Us</span></a>
+          </li>
+        </ul>
+        <a href="#" class="buy-now">Map</a>
+      </div>
+      <div class="cl">&nbsp;</div>
+      <div class="search">
+              <form action="#" method="post">
+                      <span class="field">
+                              <input type="text" class="blink" value="Search" title="Search" />
+                      </span>
+                      <input type="submit" class="search-btn notext" value="Submit" />
+              </form>
+      </div>
+  </div>
+</div>
+<!-- End Header -->
+<%= yield %>
+<!-- Main -->
+
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+	<div class="shell">
+		<p class="left">CMU SV, DMI, Semantic Geotagging, Ian Zhang</p>
+		<p class="right">
+			<a href="#">Home</a>
+			<span>|</span>
+		    <a href="#">Entities</a>
+		    <span>|</span>
+		    <a href="#">Responses</a>
+		    <span>|</span>
+		    <a href="#">Map</a>
+		    <span>|</span>
+		    <a href="#">Contact Us</a>
+	    </p>
+	    <div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- Footer -->
+</body>
+</html>

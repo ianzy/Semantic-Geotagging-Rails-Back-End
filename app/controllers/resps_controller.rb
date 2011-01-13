@@ -1,6 +1,9 @@
 require 'base64'
 
 class RespsController < ApplicationController
+
+  before_filter :require_user
+
   # GET /resps
   # GET /resps.xml
   def index

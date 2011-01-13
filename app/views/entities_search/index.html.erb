@@ -10,6 +10,13 @@
                     :with      => "'search=' + encodeURIComponent(value)" %> <!-- <label id="code.search6"/> -->
 <% end %>
 
+
+<%= link_to_remote 'testt', :before => visual_effect(:highlight, 'test')  %>
+
+<div id='ajaxWrapper'>
+  <% render :partial=>"search" %>
+</div>
+
 <% @entities.each do |@entity| %>
     <%= in_place_editor_field :entity, 'title'%> |
     <%=h @entity.title %> |
@@ -28,9 +35,4 @@
 
 <div id="test">
 visual effect~
-</div>
-<%= link_to_remote 'testt', :before => visual_effect(:highlight, 'test')  %>
-
-<div id='ajaxWrapper'>
-  <% render :partial=>"search" %>
 </div>

@@ -1,0 +1,20 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "get_resps_by_minid.html" %>
+<table>
+  <tr>
+  </tr>
+
+<% @resps.each do |resp| %>
+  <tr>
+    <td><%= resp.id %></td>
+    <td><%= resp.username %> <br/></td>
+    <td><%= resp.resp %> <br/></td>
+    <td><%= resp.image %> <br/></td>
+    <td><%= resp.time %> <br/></td>
+  </tr>
+<% end %>
+</table>

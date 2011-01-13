@@ -1,5 +1,8 @@
-<h1>Listing entities</h1>
-
+<div class="box">
+  <div class="box-head">
+    Listing entities
+  </div>
+  <div class="table">
 <table>
   <tr>
     <th>Title</th>
@@ -8,6 +11,8 @@
     <th>Location</th>
     <th>Lat</th>
     <th>Lng</th>
+    <th>Actions</th>
+    
   </tr>
 
 <% @entities.each do |entity| %>
@@ -18,13 +23,14 @@
     <td><%=h entity.location %></td>
     <td><%=h entity.lat %></td>
     <td><%=h entity.lng %></td>
-    <td><%= link_to 'Show', entity %></td>
-    <td><%= link_to 'Edit', edit_entity_path(entity) %></td>
-    <td><%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', entity %> |
+    <%= link_to 'Edit', edit_entity_path(entity) %> |
+    <%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
+</div>
+</div>
 <br />
 
 <%= link_to 'New entity', new_entity_path %>
