@@ -1,6 +1,38 @@
 ActionController::Routing::Routes.draw do |map|
 
   #map.connect "/mapview", :controller=>"mapview"
+  # Routes for api controller
+  # this set of routes are used for the resources providing to the
+  # android application
+  map.apientities "api/entities.:format",
+    :conditions => { :method => :get},
+    :controller => "api",
+    :action => "get_entities"
+  map.apicomments "api/comments.:format",
+    :conditions => { :method => :get},
+    :controller => "api",
+    :action => "get_comments"
+  map.apicommentcategories "api/comment_categories.:format",
+    :conditions => { :method => :get},
+    :controller => "api",
+    :action => "get_comment_categories"
+  map.apiresponses "api/responses.:format",
+    :conditions => { :method => :get},
+    :controller => "api",
+    :action => "get_responses"
+  map.apiresponsecategories "api/response_categories.:format",
+    :conditions => { :method => :get},
+    :controller => "api",
+    :action => "get_response_categories"
+  map.apicreateentity "api/entities.:format",
+    :conditions => { :method => :post},
+    :controller => "api",
+    :action => "create_entity"
+  map.apicreatecomment "api/comments.:format",
+    :conditions => { :method => :post},
+    :controller => "api",
+    :action => "create_comment"
+  # end of the api routes
 
   map.resource :user_session
   map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
