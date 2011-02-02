@@ -229,8 +229,12 @@ class ApiController < ApplicationController
   <Placemark>
     <name>}+entity.title+%{</name>
     <styleUrl>#}+entity.icon_uri+%{</styleUrl>
-    <description><![CDATA[<h1>CDATA Tags are useful!</h1>
-          <p>}+entity.description+%{</p>]]></description>
+    <description>
+      <![CDATA[
+        <h1>CDATA Tags are useful!</h1>
+        <p>}+entity.description+%{</p>
+      ]]>
+    </description>
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
