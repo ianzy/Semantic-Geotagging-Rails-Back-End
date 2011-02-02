@@ -247,175 +247,149 @@ class ApiController < ApplicationController
 <Document>
   <name>Semantatic Geotagging</name>
   <description><![CDATA[]]></description>
-        <Style id="fireicon">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/FireIcon_small.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <Style id="landslide">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/Landslide.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <Placemark>
-          <name>Fire1</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Fire inbayshore sunnyvale golf course
+    <Style id="fireicon">
+      <IconStyle>
+        <Icon>
+          <href>http://geotagging.heroku.com/images/icons/FireIcon_small.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="landslide">
+      <IconStyle>
+        <Icon>
+          <href>http://geotagging.heroku.com/images/icons/Landslide.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Fire1</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Fire inbayshore sunnyvale golf course
 Mountain View, CA 94043]]></description>
-          <Point>
-            <coordinates>37.396892,-122.041969,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Smoke</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Smoke in 489-499 Carnegie Mellon Silicon Valley
+      <Point>
+        <coordinates>37.396892,-122.041969,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Smoke</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Smoke in 489-499 Carnegie Mellon Silicon Valley
 Mountain View, CA 94043]]></description>
-          <Point>
-            <coordinates>37.409948,-122.059822,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Plane crash</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Plane crash in N Akron Rd
+      <Point>
+        <coordinates>37.409948,-122.059822,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Plane crash</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Plane crash in N Akron Rd
 Mountain View, CA 94043]]></description>
-          <Point>
-            <coordinates>37.411346,-122.059608,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Fire in Park</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[fire in Berry Dr
+      <Point>
+        <coordinates>37.411346,-122.059608,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fire in Park</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[fire in Berry Dr
 Mountain View, CA 94043
 ]]></description>
-          <Point>
-            <coordinates>37.40971,-122.061796,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Fire in building 23</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[test]]></description>
-          <Point>
-            <coordinates>37.410153,-122.059286,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Earthquake</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Earthquake in Mc Cord Ave
+      <Point>
+        <coordinates>37.40971,-122.061796,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fire in building 23</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[test]]></description>
+      <Point>
+        <coordinates>37.410153,-122.059286,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Earthquake</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Earthquake in Mc Cord Ave
 Mountain View, CA 94043
 ]]></description>
-          <Point>
-            <coordinates>37.411073,-122.056947,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>San Bruno Fire</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[An explosion and fireball erupted from near the intersection near Glenview Drive and Earl Avenue. People as far as one-half mile away say they felt the boom and heat of the explosion.]]></description>
-          <Point>
-            <coordinates>37.622798,-122.441812,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Fire in Claremont Dr</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[1710 Claremont Dr
+      <Point>
+        <coordinates>37.411073,-122.056947,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>San Bruno Fire</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[An explosion and fireball erupted from near the intersection near Glenview Drive and Earl Avenue. People as far as one-half mile away say they felt the boom and heat of the explosion.]]></description>
+      <Point>
+        <coordinates>37.622798,-122.441812,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fire in Claremont Dr</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[1710 Claremont Dr
 San Bruno, CA 94066]]></description>
-          <Point>
-            <coordinates>37.623036,-122.442412,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>House on fire</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[1661 Claremont Dr
+      <Point>
+        <coordinates>37.623036,-122.442412,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>House on fire</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[1661 Claremont Dr
 San Bruno, CA 94066]]></description>
-          <Point>
-            <coordinates>37.623257,-122.441018,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Injury in Earl Ave</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[People need help in 1711 Earl Ave
+      <Point>
+        <coordinates>37.623257,-122.441018,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Injury in Earl Ave</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[People need help in 1711 Earl Ave
 San Bruno, CA 94066]]></description>
-          <Point>
-            <coordinates>37.622747,-122.442155,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Primary Evacuation Center for fire</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Primary Evacuation Center for fire
+      <Point>
+        <coordinates>37.622747,-122.442155,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Primary Evacuation Center for fire</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Primary Evacuation Center for fire
 Bayhill Shopping Center
 San Bruno, CA 94066]]></description>
-          <Point>
-            <coordinates>37.626435,-122.425804,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Red Cross</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[HELP: Veterans Memorial Recreation Center and Senior Center
-
-
+      <Point>
+        <coordinates>37.626435,-122.425804,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Red Cross</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[HELP: Veterans Memorial Recreation Center and Senior Center
 The American Red Cross Bay Area Chapter disaster action team is on the scene in San Bruno responding to a fire that has engulfed dozens of homes.
-
- (650) 616-7180 call if you are safe - only if you are in the affected area - they are making a list]]></description>
-          <Point>
-            <coordinates>37.617359,-122.415075,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>House on fire</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[1000-1136 Fairmont Dr
+(650) 616-7180 call if you are safe - only if you are in the affected area - they are making a list]]></description>
+      <Point>
+        <coordinates>37.617359,-122.415075,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>House on fire</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[1000-1136 Fairmont Dr
 San Bruno, CA 94066]]></description>
-          <Point>
-            <coordinates>37.624123,-122.441361,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>New Entity From Android App</name>
-          <styleUrl>#fireicon</styleUrl>
-          <description><![CDATA[Just test the functionality]]></description>
-          <Point>
-            <coordinates>37.623781,-122.443036,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-        <Placemark>
-          <name>Fire</name>
-          <styleUrl>#landslide</styleUrl>
-          <description><![CDATA[Fire inbayshore sunnyvale golf course Mountain ViewCA 94043]]></description>
-          <Point>
-            <coordinates>37.405483,-122.094326,0.000000</coordinates>
-          </Point>
-        </Placemark>
-
-      </Document>
-    </kml>
+      <Point>
+        <coordinates>37.624123,-122.441361,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>New Entity From Android App</name>
+      <styleUrl>#fireicon</styleUrl>
+      <description><![CDATA[Just test the functionality]]></description>
+      <Point>
+        <coordinates>37.623781,-122.443036,0.000000</coordinates>
+      </Point>
+    </Placemark>
+</Document>
+</kml>
     }
     render :text => test
   end
