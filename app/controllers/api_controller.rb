@@ -205,7 +205,7 @@ class ApiController < ApplicationController
     icons = Icon.all
     icons.each do |icon|
       iconstyles = iconstyles +
-%{<Style id="}+icon.name+%{">
+%{  <Style id="}+icon.name+%{">
     <IconStyle>
       <Icon>
         <href>}+icon.url+%{</href>
@@ -219,7 +219,8 @@ class ApiController < ApplicationController
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
   <name>Semantatic Geotagging</name>
-  <description><![CDATA[]]></description>}
+  <description><![CDATA[]]></description>
+}
     kml = kml + iconstyles
     entities = Entity.all
     entities.each do |entity|
