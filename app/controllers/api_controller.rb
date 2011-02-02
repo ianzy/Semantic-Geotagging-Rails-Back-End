@@ -230,10 +230,11 @@ class ApiController < ApplicationController
     <name>}+entity.title+%{</name>
     <styleUrl>#}+entity.icon_uri+%{</styleUrl>
     <description>
-      <![CDATA[
-        <h1>CDATA Tags are useful!</h1>
-        <p>}+entity.description+%{</p>
-      ]]>
+      &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/people/shreck/&quot;&gt;manshreck&lt;/a&gt; posted a photo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/shreck/228310017/&quot; title=&quot;Los Angeles, CA&quot;&gt;&lt;img src=&quot;http://farm1.static.flickr.com/95/228310017_59aa7fb709_m.jpg&quot; width=&quot;240&quot; height=&quot;179&quot; alt=&quot;Los Angeles, CA&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Faulkner at Echo Lake, Los Angeles. I slept in the car that morning.&lt;/p&gt;
     </description>
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
