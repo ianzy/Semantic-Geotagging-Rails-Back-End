@@ -229,7 +229,7 @@ class ApiController < ApplicationController
   <Placemark>
     <name>}+entity.title+%{</name>
     <styleUrl>#}+entity.icon_uri+%{</styleUrl>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[}+entity.description+%{]]></description>
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
