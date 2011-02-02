@@ -206,30 +206,7 @@ class ApiController < ApplicationController
   <Document>
     <name>Highlighted Icon</name>
     <description>Place your mouse over the icon to see it display the new icon</description>
-    <Style id="highlightPlacemark">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
-        </Icon>
-      </IconStyle>
-    </Style>
-    <Style id="normalPlacemark">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
-        </Icon>
-      </IconStyle>
-    </Style>
-    <StyleMap id="exampleStyleMap">
-      <Pair>
-        <key>normal</key>
-        <styleUrl>#normalPlacemark</styleUrl>
-      </Pair>
-      <Pair>
-        <key>highlight</key>
-        <styleUrl>#highlightPlacemark</styleUrl>
-      </Pair>
-    </StyleMap>
+    
     <Placemark>
       <name>Roll over this icon</name>
       
