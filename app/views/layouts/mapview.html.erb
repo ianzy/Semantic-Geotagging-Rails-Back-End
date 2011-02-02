@@ -35,7 +35,9 @@
 
             <%#*var geoXml = new geoXML3.parser({map: map});%>
             <%#*geoXml.parse('http://sterlingudell.com/bgmm/chapter_09/state_capitals.kml');%>
-            var ctaLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/georss.kml');
+            <%#*var ctaLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/georss.kml');%>
+            <%#*ctaLayer.setMap(map);%>
+            var ctaLayer = new google.maps.KmlLayer('http://sterlingudell.com/bgmm/chapter_09/state_capitals.kml');
             ctaLayer.setMap(map);
           }
 

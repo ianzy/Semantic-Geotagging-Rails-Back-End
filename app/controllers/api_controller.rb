@@ -263,7 +263,6 @@ class ApiController < ApplicationController
     </Style>
     <Placemark>
       <name>Fire1</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.396892,-122.041969,0.000000</coordinates>
@@ -271,7 +270,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Smoke</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.409948,-122.059822,0.000000</coordinates>
@@ -279,7 +277,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Plane crash</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.411346,-122.059608,0.000000</coordinates>
@@ -287,7 +284,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Fire in Park</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.40971,-122.061796,0.000000</coordinates>
@@ -295,7 +291,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Fire in building 23</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[test]]></description>
       <Point>
         <coordinates>37.410153,-122.059286,0.000000</coordinates>
@@ -303,7 +298,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Earthquake</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.411073,-122.056947,0.000000</coordinates>
@@ -311,7 +305,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>San Bruno Fire</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.622798,-122.441812,0.000000</coordinates>
@@ -319,7 +312,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Fire in Claremont Dr</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.623036,-122.442412,0.000000</coordinates>
@@ -327,7 +319,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>House on fire</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.623257,-122.441018,0.000000</coordinates>
@@ -335,7 +326,6 @@ class ApiController < ApplicationController
     </Placemark>
     <Placemark>
       <name>Injury in Earl Ave</name>
-      <styleUrl>#fireicon</styleUrl>
       <description><![CDATA[t]]></description>
       <Point>
         <coordinates>37.622747,-122.442155,0.000000</coordinates>
@@ -351,22 +341,6 @@ class ApiController < ApplicationController
 <Document>
   <name>US State Capitals</name>
   <description><![CDATA[]]></description>
-  <Style id="element">
-    <IconStyle>
-    <Icon>
-      <href>http://www.ziip.be/map/zip-vert.png</href>
-    </Icon>
-    </IconStyle>
-  </Style>
-
-  <Style id="newe">
-    <IconStyle>
-    <Icon>
-      <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
-    </Icon>
-    </IconStyle>
-  </Style>
-
   <Placemark>
     <name>Alabama</name>
     <styleUrl>#element</styleUrl>
