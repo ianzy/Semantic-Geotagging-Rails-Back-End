@@ -233,8 +233,6 @@ class ApiController < ApplicationController
           </Point>
         </Placemark>
       }
-      puts entity
-      puts entity.lat
     end
 
     kml = kml + %{
