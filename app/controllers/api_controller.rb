@@ -231,7 +231,7 @@ class ApiController < ApplicationController
     <styleUrl>#}+entity.icon_uri+%{</styleUrl>
     <description><![CDATA[]]></description>
     <Point>
-      <coordinates>}+entity.lat.to_s+%{,}+entity.lng.to_s+%{,0.000000</coordinates>
+      <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
   </Placemark>
 }
