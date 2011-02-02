@@ -241,9 +241,7 @@ class ApiController < ApplicationController
 </Document>
 </kml>
 }
-    respond_to do |format|
-      format.xml  { render :xml => kml }
-    end
+    render :text=>kml
   end
 
 end
