@@ -201,6 +201,7 @@ class ApiController < ApplicationController
 
   #Generate georss stuff
   def georss
+    
     rss = %{<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
@@ -213,6 +214,15 @@ class ApiController < ApplicationController
     </Icon>
     </IconStyle>
   </Style>
+
+  <Style id="newe">
+    <IconStyle>
+    <Icon>
+      <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
+    </Icon>
+    </IconStyle>
+  </Style>
+
   <Placemark>
     <name>Alabama</name>
     <styleUrl>#element</styleUrl>
@@ -238,6 +248,7 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>Arkansas</name>
+    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Little Rock]]></description>
     <Point>
       <coordinates>-92.288986,34.746613,0.000000</coordinates>
@@ -245,6 +256,7 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>California</name>
+    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Sacramento]]></description>
     <Point>
       <coordinates>-121.493629,38.576668,0.000000</coordinates>
@@ -252,6 +264,7 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>Colorado</name>
+    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Denver]]></description>
     <Point>
       <coordinates>-104.984856,39.739227,0.000000</coordinates>
