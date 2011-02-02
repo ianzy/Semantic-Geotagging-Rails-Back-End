@@ -205,7 +205,8 @@ class ApiController < ApplicationController
     icons = Icon.all
     icons.each do |icon|
       iconstyles = iconstyles +
-      %{<Style id="}+icon.name+%{">
+      %{
+        <Style id="}+icon.name+%{">
           <IconStyle>
             <Icon>
               <href>}+icon.url+%{</href>
@@ -224,7 +225,8 @@ class ApiController < ApplicationController
     entities = Entity.all
     entities.each do |entity|
       kml = kml +
-      %{<Placemark>
+      %{
+        <Placemark>
           <name>}+entity.title+%{</name>
           <styleUrl>#}+entity.icon_uri+%{</styleUrl>
           <description><![CDATA[}+entity.description+%{]]></description>
@@ -239,9 +241,7 @@ class ApiController < ApplicationController
       </Document>
     </kml>
     }
-
     
-
     render :text => kml
   end
 
