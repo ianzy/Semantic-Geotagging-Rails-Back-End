@@ -201,8 +201,7 @@ class ApiController < ApplicationController
 
   #Generate georss stuff
   def georss
-    rss = %{
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+    rss = %{<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <feed xmlns="http://www.w3.org/2005/Atom"
       xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
@@ -549,8 +548,7 @@ class ApiController < ApplicationController
   </entry>
 
 
-</feed>
-    }
+</feed>}
 
     render :text => rss
   end
