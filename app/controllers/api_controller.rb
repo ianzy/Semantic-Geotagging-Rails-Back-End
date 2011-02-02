@@ -343,7 +343,6 @@ class ApiController < ApplicationController
   <description><![CDATA[]]></description>
   <Placemark>
     <name>Alabama</name>
-    <styleUrl>#element</styleUrl>
     <description><![CDATA[Montgomery]]></description>
     <Point>
       <coordinates>-86.300568,32.377716,0.000000</coordinates>
@@ -351,7 +350,6 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>Alaska</name>
-    <styleUrl>#element</styleUrl>
     <description><![CDATA[Juneau]]></description>
     <Point>
       <coordinates>-134.420212,58.301598,0.000000</coordinates>
@@ -366,7 +364,6 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>Arkansas</name>
-    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Little Rock]]></description>
     <Point>
       <coordinates>-92.288986,34.746613,0.000000</coordinates>
@@ -374,7 +371,6 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>California</name>
-    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Sacramento]]></description>
     <Point>
       <coordinates>-121.493629,38.576668,0.000000</coordinates>
@@ -382,7 +378,6 @@ class ApiController < ApplicationController
   </Placemark>
   <Placemark>
     <name>Colorado</name>
-    <styleUrl>#newe</styleUrl>
     <description><![CDATA[Denver]]></description>
     <Point>
       <coordinates>-104.984856,39.739227,0.000000</coordinates>
