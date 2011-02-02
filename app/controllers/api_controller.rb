@@ -230,9 +230,7 @@ class ApiController < ApplicationController
     <name>}+entity.title+%{</name>
     <styleUrl>#}+entity.icon_uri+%{</styleUrl>
     <description><![CDATA[<h1>CDATA Tags are useful!</h1>
-          <p><font color="red">Text is <i>more readable</i> and
-          <b>easier to write</b> when you can avoid using entity
-          references.</font></p>}+entity.description+%{]]></description>
+          <p>}+entity.description+%{</p>]]></description>
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
