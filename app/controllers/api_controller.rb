@@ -333,7 +333,7 @@ Mountain View, CA 94043]]></description>
 
         <Placemark>
           <name>Plane crash</name>
-          <styleUrl>#explosionicon</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[Plane crash in N Akron Rd
 Mountain View, CA 94043]]></description>
           <Point>
@@ -343,7 +343,7 @@ Mountain View, CA 94043]]></description>
 
         <Placemark>
           <name>Fire in Park</name>
-          <styleUrl>#firetruckicon</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[fire in Berry Dr
 Mountain View, CA 94043
 ]]></description>
@@ -363,7 +363,7 @@ Mountain View, CA 94043
 
         <Placemark>
           <name>Earthquake</name>
-          <styleUrl>#earthquake</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[Earthquake in Mc Cord Ave
 Mountain View, CA 94043
 ]]></description>
@@ -374,7 +374,7 @@ Mountain View, CA 94043
 
         <Placemark>
           <name>San Bruno Fire</name>
-          <styleUrl>#earthquake</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[An explosion and fireball erupted from near the intersection near Glenview Drive and Earl Avenue. People as far as one-half mile away say they felt the boom and heat of the explosion.]]></description>
           <Point>
             <coordinates>37.622798,-122.441812,0.000000</coordinates>
@@ -383,7 +383,7 @@ Mountain View, CA 94043
 
         <Placemark>
           <name>Fire in Claremont Dr</name>
-          <styleUrl>#earthquake</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[1710 Claremont Dr
 San Bruno, CA 94066]]></description>
           <Point>
@@ -393,7 +393,7 @@ San Bruno, CA 94066]]></description>
 
         <Placemark>
           <name>House on fire</name>
-          <styleUrl>#earthquake</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[1661 Claremont Dr
 San Bruno, CA 94066]]></description>
           <Point>
@@ -403,7 +403,7 @@ San Bruno, CA 94066]]></description>
 
         <Placemark>
           <name>Injury in Earl Ave</name>
-          <styleUrl>#landslide</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[People need help in 1711 Earl Ave
 San Bruno, CA 94066]]></description>
           <Point>
@@ -413,7 +413,7 @@ San Bruno, CA 94066]]></description>
 
         <Placemark>
           <name>Primary Evacuation Center for fire</name>
-          <styleUrl>#crime</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[Primary Evacuation Center for fire
 Bayhill Shopping Center
 San Bruno, CA 94066]]></description>
@@ -424,7 +424,7 @@ San Bruno, CA 94066]]></description>
 
         <Placemark>
           <name>Red Cross</name>
-          <styleUrl>#crime</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[HELP: Veterans Memorial Recreation Center and Senior Center
 
 
@@ -438,7 +438,7 @@ The American Red Cross Bay Area Chapter disaster action team is on the scene in 
 
         <Placemark>
           <name>House on fire</name>
-          <styleUrl>#crime</styleUrl>
+          <styleUrl>#fireicon</styleUrl>
           <description><![CDATA[1000-1136 Fairmont Dr
 San Bruno, CA 94066]]></description>
           <Point>
