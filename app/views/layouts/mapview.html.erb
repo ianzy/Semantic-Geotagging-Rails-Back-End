@@ -33,10 +33,9 @@
 
             setMarkers(map, beaches);
 
-            var test = ""
             <%#*var geoXml = new geoXML3.parser({map: map});%>
             <%#*geoXml.parse('http://sterlingudell.com/bgmm/chapter_09/state_capitals.kml');%>
-            var ctaLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/georss.kml');
+            var ctaLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss');
             ctaLayer.setMap(map);
           }
 
