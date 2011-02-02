@@ -205,42 +205,19 @@ class ApiController < ApplicationController
     icons = Icon.all
     icons.each do |icon|
       iconstyles = iconstyles +
-%{
-  <Style id="}+icon.name+%{">
-    <IconStyle>
-      <Icon>
-        <href>}+icon.url+%{</href>
-      </Icon>
-    </IconStyle>
-  </Style>
-}
+%{<Style id="}+icon.name+%{"><IconStyle><Icon><href>}+icon.url+%{</href></Icon></IconStyle></Style>}
     end
 
-    kml = %{<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
-<Document>
-  <name>Semantatic Geotagging</name>
-  <description><![CDATA[]]></description>}
+    kml = %{<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Semantatic Geotagging</name><description><![CDATA[]]></description>}
     kml = kml + iconstyles
     entities = Entity.all
     entities.each do |entity|
       kml = kml +
-%{
-  <Placemark>
-    <name>}+entity.title+%{</name>
-    <styleUrl>#}+entity.icon_uri+%{</styleUrl>
-    <description><![CDATA[}+entity.description+%{]]></description>
-    <Point>
-      <coordinates>}+entity.lat.to_s+%{,}+entity.lng.to_s+%{,0.000000</coordinates>
-    </Point>
-  </Placemark>
-}
+%{<Placemark><name>}+entity.title+%{</name><styleUrl>#}+entity.icon_uri+%{</styleUrl><description><![CDATA[]]></description><Point><coordinates>}+entity.lat.to_s+%{,}+entity.lng.to_s+%{,0.000000</coordinates></Point></Placemark>}
     end
 
     kml = kml +
-%{
-</Document>
-</kml>
+%{</Document></kml>
 }
     render :text => kml
   end

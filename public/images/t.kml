@@ -3,15 +3,24 @@
 <Document>
   <name>US State Capitals</name>
   <description><![CDATA[]]></description>
+	<Style id="fireicon">
+	<IconStyle>
+	<Icon>
+	<href>http://geotagging.heroku.com/images/icons/FireIcon_small.png</href>
+	</Icon>
+	</IconStyle>
+	</Style>
   <Placemark>
    	<name>Alabama</name>
     <description><![CDATA[Montgomery]]></description>
+	<styleUrl>#fireicon</styleUrl>
 	<Point>
 		<coordinates>-86.300568,32.377716,0.000000</coordinates>
     </Point>
   </Placemark>
   <Placemark>
     <name>Alaska</name>
+<styleUrl>#fireicon</styleUrl>
     <description><![CDATA[Juneau]]></description>
     <Point>
       <coordinates>-134.420212,58.301598,0.000000</coordinates>
@@ -19,6 +28,7 @@
   </Placemark>
   <Placemark>
     <name>Arizona</name>
+<styleUrl>#fireicon</styleUrl>
     <description><![CDATA[Phoenix]]></description>
     <Point>
       <coordinates>-112.096962,33.448143,0.000000</coordinates>
@@ -26,6 +36,7 @@
   </Placemark>
   <Placemark>
     <name>Arkansas</name>
+<styleUrl>#fireicon</styleUrl>
     <description><![CDATA[Little Rock]]></description>
     <Point>
       <coordinates>-92.288986,34.746613,0.000000</coordinates>
@@ -33,6 +44,7 @@
   </Placemark>
   <Placemark>
     <name>California</name>
+<styleUrl>#fireicon</styleUrl>
     <description><![CDATA[Sacramento]]></description>
     <Point>
       <coordinates>-121.493629,38.576668,0.000000</coordinates>
