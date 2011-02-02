@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<kml xmlns="http://www.opengis.net/kml/2.2"> 
+<Document> 
+  <name>Semantatic Geotagging</name> 
+  <description><![CDATA[]]></description> 
+    <Style id="fireicon"> 
+      <IconStyle>
+        <Icon>
+          <href>http://geotagging.heroku.com/images/icons/FireIcon_small.png</href>
+        </Icon>
+      </IconStyle>
+    </Style> 
+    <Style id="landslide"> 
+      <IconStyle>
+        <Icon>
+          <href>http://geotagging.heroku.com/images/icons/Landslide.png</href>
+        </Icon>
+      </IconStyle>
+    </Style> 
+    <Placemark> 
+      <name>Fire1</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.396892,-122.041969,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Smoke</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.409948,-122.059822,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Plane crash</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.411346,-122.059608,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Fire in Park</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.40971,-122.061796,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Fire in building 23</name> 
+      <description><![CDATA[test]]></description> 
+      <Point> 
+        <coordinates>37.410153,-122.059286,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Earthquake</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.411073,-122.056947,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>San Bruno Fire</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.622798,-122.441812,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Fire in Claremont Dr</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.623036,-122.442412,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>House on fire</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.623257,-122.441018,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+    <Placemark> 
+      <name>Injury in Earl Ave</name> 
+      <description><![CDATA[t]]></description> 
+      <Point> 
+        <coordinates>37.622747,-122.442155,0.000000</coordinates> 
+      </Point> 
+    </Placemark> 
+</Document> 
+</kml>
