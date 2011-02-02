@@ -209,6 +209,10 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Alabama</name>
     <description><![CDATA[Montgomery]]></description>
+    <Icon>
+       <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
+    </Icon>
+
     <Point>
       <coordinates>-86.300568,32.377716,0.000000</coordinates>
     </Point>
@@ -216,6 +220,9 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Alaska</name>
     <description><![CDATA[Juneau]]></description>
+    <Icon>
+       <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
+    </Icon>
     <Point>
       <coordinates>-134.420212,58.301598,0.000000</coordinates>
     </Point>
@@ -223,6 +230,9 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Arizona</name>
     <description><![CDATA[Phoenix]]></description>
+    <Icon>
+       <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
+    </Icon>
     <Point>
       <coordinates>-112.096962,33.448143,0.000000</coordinates>
     </Point>
@@ -230,6 +240,9 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Arkansas</name>
     <description><![CDATA[Little Rock]]></description>
+    <Icon>
+       <href>http://www.chilliwackteachers.com/images/maps_icon.png</href>
+    </Icon>
     <Point>
       <coordinates>-92.288986,34.746613,0.000000</coordinates>
     </Point>
