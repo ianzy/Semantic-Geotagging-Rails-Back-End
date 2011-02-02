@@ -254,23 +254,6 @@ class ApiController < ApplicationController
             </Icon>
           </IconStyle>
         </Style>
-
-        <Style id="firetruckicon">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/FireTruckIcon.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
-        <Style id="firestation">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/FireStation_v2.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
         <Style id="landslide">
           <IconStyle>
             <Icon>
@@ -278,39 +261,6 @@ class ApiController < ApplicationController
             </Icon>
           </IconStyle>
         </Style>
-
-        <Style id="earthquake">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/Earthquake.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
-        <Style id="crime">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/Crime.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
-        <Style id="ambulanceicon">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/AmbulanceIcon.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
-        <Style id="explosionicon">
-          <IconStyle>
-            <Icon>
-              <href>http://geotagging.heroku.com/images/icons/ExplosionIcon.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-
         <Placemark>
           <name>Fire1</name>
           <styleUrl>#fireicon</styleUrl>
