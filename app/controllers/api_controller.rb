@@ -233,6 +233,7 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Alabama</name>
     <description><![CDATA[Montgomery]]></description>
+    <styleUrl>#exampleStyleMap</styleUrl>
     <Point>
       <coordinates>-86.300568,32.377716,0.000000</coordinates>
     </Point>
@@ -240,6 +241,7 @@ class ApiController < ApplicationController
   <Placemark>
     <name>Alaska</name>
     <description><![CDATA[Juneau]]></description>
+    <styleUrl>#exampleStyleMap</styleUrl>
     <Point>
       <coordinates>-134.420212,58.301598,0.000000</coordinates>
     </Point>
