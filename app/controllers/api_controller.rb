@@ -232,7 +232,7 @@ class ApiController < ApplicationController
     </StyleMap>
     <Placemark>
       <name>Roll over this icon</name>
-      <styleUrl>#exampleStyleMap</styleUrl>
+      
       <Point>
         <coordinates>-122.0856545755255,37.42243077405461,0</coordinates>
       </Point>
