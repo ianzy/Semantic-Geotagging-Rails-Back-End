@@ -200,7 +200,7 @@ class ApiController < ApplicationController
   end
 
   #Generate georss stuff
-  def georss
+  def geoinfomation
     iconstyles = ""
     icons = Icon.all
     icons.each do |icon|
@@ -244,7 +244,7 @@ class ApiController < ApplicationController
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
-  </Placemark>}
+  </Placemarkff>}
     end
 
     kml = kml +
