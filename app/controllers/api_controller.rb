@@ -231,7 +231,7 @@ class ApiController < ApplicationController
     <name>}+entity.title+%{</name>
     <description>
       <![CDATA[
-        <h1>CDATA Tags are useful!</h1>
+        <p>According to the USGS, an earthquake occurs when plates grind and scrape against each other. In California there are 2 plates: the Pacific Plate and the North American Plate. The Pacific Plate consists of most of the Pacific Ocean floor and the California Coast line. The North American Plate comprises most the North American Continent and parts of the Atlantic Ocean floor. These primary boundary between these 2 plates is the San Andreas fault. The San Andreas fault is more than 650 miles long and extends to depths of at least 10 miles. Many other smaller faults like the Hayward (Northern California) and the San Jacinto (Southern California) branch from and join the San Andreas fault zone. The Pacific plate grinds northwestward past the North American Plate at a rate of about 2 inches per year. Parts of the San Andreas fault system adapt to this movement by constant “creep” resulting in many tiny shocks and a few moderate earth tremors. In other areas where creep is NOT constant, strain can build up for hundreds of years, producing great earthquakes when it finally releases.</p>
         <p>}+entity.description+%{</p>
       ]]>
     </description>
