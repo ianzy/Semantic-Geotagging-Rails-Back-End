@@ -199,8 +199,8 @@ class ApiController < ApplicationController
     end
   end
 
-  #Generate georss stuff
-  def geoinfomation
+  #Generate geo stuff
+  def geoinformation
     iconstyles = ""
     icons = Icon.all
     icons.each do |icon|
