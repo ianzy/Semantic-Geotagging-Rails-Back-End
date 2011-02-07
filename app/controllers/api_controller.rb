@@ -253,7 +253,8 @@ class ApiController < ApplicationController
 </kml>
 }
 
-    render :text=>kml
+    
+    render :xml => kml
   end
 
 end
