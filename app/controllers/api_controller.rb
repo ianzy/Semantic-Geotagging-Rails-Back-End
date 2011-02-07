@@ -244,7 +244,7 @@ class ApiController < ApplicationController
     <Point>
       <coordinates>}+entity.lng.to_s+%{,}+entity.lat.to_s+%{,0.000000</coordinates>
     </Point>
-  </Placemarkff>}
+  </Placemark>}
     end
 
     kml = kml +
