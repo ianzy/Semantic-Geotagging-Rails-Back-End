@@ -13,151 +13,25 @@
         </script>
         <script type="text/javascript" src="/javascripts/geoxml3.js"></script>
         <script type="text/javascript">
-          var map;
-          var markersArray = [];
           
 
           function initialize() {
-            var haightAshbury = new google.maps.LatLng(37.624123, -122.441361);
+            var cmupoint = new google.maps.LatLng(37.41046,-122.059243);
             var mapOptions = {
-              zoom: 12,
-              center: haightAshbury,
+              zoom: 16,
+              center: cmupoint,
               mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             map = new google.maps.Map(document.getElementById("map_canvas"),
                 mapOptions);
+   
+            var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
+              + '&dummy='
+              + (new Date()).getTime(),
+              ({'preserveViewport': true}));
+            geotaggingLayer.setMap(map);
 
-            <%#*google.maps.event.addListener(map, 'click', function(event) {%>
-              <%#*addMarker(event.latLng);%>
-            <%#*});%>
 
-            setMarkers(map, beaches);
-
-            <%#*var geoXml = new geoXML3.parser({map: map});%>
-            <%#*geoXml.parse('http://sterlingudell.com/bgmm/chapter_09/state_capitals.kml');%>
-            <%#*var ctaLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss');%>
-            <%#*ctaLayer.setMap(map);%>
-            var ctaLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
-              + '?dummy='
-              + (new Date()).getTime());
-            ctaLayer.setMap(map);
-
-            <%#*var ctaLayer = new google.maps.KmlLayer('http://sterlingudell.com/bgmm/chapter_09/state_capitals.kml');%>
-            <%#*ctaLayer.setMap(map);%>
-            <%#*var ctaLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/images/t.kml');%>
-            <%#*ctaLayer.setMap(map);%>
-          }
-
-          function addMarker(location) {
-            marker = new google.maps.Marker({
-              position: location,
-              map: map
-            });
-            markersArray.push(marker);
-          }
-
-          // Removes the overlays from the map, but keeps them in the array
-          function clearOverlays() {
-            if (markersArray) {
-              for (i in markersArray) {
-                markersArray[i].setMap(null);
-              }
-            }
-          }
-
-          // Shows any overlays currently in the array
-          function showOverlays() {
-            if (markersArray) {
-              for (i in markersArray) {
-                markersArray[i].setMap(map);
-              }
-            }
-          }
-
-          // Deletes all markers in the array by removing references to them
-          function deleteOverlays() {
-            if (markersArray) {
-              for (i in markersArray) {
-                markersArray[i].setMap(null);
-              }
-              markersArray.length = 0;
-            }
-          }
-
-          var contentString = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-              '<div id="bodyContent">'+
-              '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-              'sandstone rock formation in the southern part of the '+
-              'Northern Territory, central Australia. It lies 335 km (208 mi) '+
-              'south west of the nearest large town, Alice Springs; 450 km '+
-              '(280 mi) by road. Kata Tjuta and Uluru are the two major '+
-              'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-              'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-              'Aboriginal people of the area. It has many springs, waterholes, '+
-              'rock caves and ancient paintings. Uluru is listed as a World '+
-              'Heritage Site.</p>'+
-              '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-              'http://en.wikipedia.org/w/index.php?title=Uluru</a> (last visited June 22, 2009).</p>'+
-              '</div>'+
-              '</div>';
-
-          
-
-          var beaches = [
-            ['Bondi Beach', -33.890542, 151.274856, 4],
-            ['Coogee Beach', -33.923036, 151.259052, 5],
-            ['Cronulla Beach', -34.028249, 151.157507, 3],
-            ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-            ['Maroubra Beach', -33.950198, 151.259302, 1]
-          ];
-
-          function setMarkers(map, locations) {
-            // Add markers to the map
-
-            // Marker sizes are expressed as a Size of X,Y
-            // where the origin of the image (0,0) is located
-            // in the top left of the image.
-
-            // Origins, anchor positions and coordinates of the marker
-            // increase in the X direction to the right and in
-            // the Y direction down.
-            var image = new google.maps.MarkerImage('/images/icons/FireIcon_small.png',
-                // This marker is 20 pixels wide by 32 pixels tall.
-                new google.maps.Size(32, 32),
-                // The origin for this image is 0,0.
-                new google.maps.Point(0,0),
-                // The anchor for this image is the base of the flagpole at 0,32.
-                new google.maps.Point(16, 16));
-            
-
-            for (var i = 0; i < locations.length; i++) {
-              var beach = locations[i];
-              var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
-
-              var marker = new google.maps.Marker({
-                  position: myLatLng,
-                  map: map,
-                  icon: image,
-                  title: beach[0],
-                  zIndex: beach[3]
-              });
-
-              attachSecretMessage(marker)
-            }
-          }
-
-          function attachSecretMessage(marker) {
-            var message = ["This","is","the","secret","message"];
-            var infowindow = new google.maps.InfoWindow(
-                {
-                  content: contentString
-                });
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.open(map,marker);
-            });
           }
 
         </script>

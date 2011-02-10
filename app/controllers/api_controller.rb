@@ -103,19 +103,31 @@ class ApiController < ApplicationController
     count = 20
     count = params[:count] if params[:count]
     since_id = params[:since_id] if params[:since_id]
+    entity_id = params[:entity_id]
 #    max_id = params[:max_id] unless params[:max_id]
     if since_id.nil?
-      @comments = Comment.find :all,
-        :conditions=>["comment_id = -1"],
+      comments = Comment.find :all,
+        :conditions=>["comment_id = -1 and entity_id = ?", entity_id],
         :limit=>count
     else
-      @comments = Comment.find :all,
-        :conditions => [" id > ? and comment_id = -1", since_id], :limit=>count
+      comments = Comment.find :all,
+        :conditions => [" id > ? and comment_id = -1 and entity_id = ?", since_id, entity_id],
+        :limit=>count
     end
 
+
+    json_array = []
+    comments.each do |comment|
+        user = User.find comment.user_id
+        json_array << {:comment=>{:created_at=>"#{comment.created_at}",:image_url=>"#{comment.image_url}",
+            :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{comment.description}",
+            :comment_id=>comment.id}}
+    end
+
+    json_string = ActiveSupport::JSON.encode(json_array)
+
     respond_to do |format|
-      format.xml  { render :xml => @comments }
-      format.json { render :json => @comments }
+      format.json { render :json => json_string }
     end
   end
 
@@ -147,18 +159,27 @@ class ApiController < ApplicationController
     since_id = params[:since_id] if params[:since_id]
 #    max_id = params[:max_id] unless params[:max_id]
     if since_id.nil?
-      @responses = Comment.find :all,
+      responses = Comment.find :all,
         :conditions => ["comment_id = ?", comment_id],
         :limit=>count
     else
-      @responses = Comment.find :all,
+      responses = Comment.find :all,
         :conditions => [" id > ? and comment_id = ?", since_id, comment_id],
         :limit=>count
     end
 
+    json_array = []
+    responses.each do |response|
+        user = User.find response.user_id
+        json_array << {:comment=>{:created_at=>"#{response.created_at}",:image_url=>"#{response.image_url}",
+            :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{response.description}",
+            :comment_id=>response.id}}
+    end
+
+    json_string = ActiveSupport::JSON.encode(json_array)
+
     respond_to do |format|
-      format.xml  { render :xml => @responses }
-      format.json { render :json => @responses }
+      format.json { render :json => json_string }
     end
   end
 
@@ -199,7 +220,7 @@ class ApiController < ApplicationController
     end
   end
 
-  #Generate geo stuff
+  #Generate kml content
   def geoinformation
     iconstyles = ""
     icons = Icon.all
