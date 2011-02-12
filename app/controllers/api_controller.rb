@@ -174,7 +174,7 @@ class ApiController < ApplicationController
         user = User.find response.user_id
         json_array << {:comment=>{:created_at=>"#{response.created_at}",:image_url=>"#{response.image_url}",
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{response.description}",
-            :comment_id=>response.id, :category_id=>"#{response.category_id}"}}
+            :comment_id=>response.comment_id, :category_id=>"#{response.category_id}"}}
     end
 
     json_string = ActiveSupport::JSON.encode(json_array)
