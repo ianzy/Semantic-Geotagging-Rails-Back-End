@@ -58,6 +58,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #navigation ul li .dd ul li a.subhover { background: transparent url(../images/blue-arrow.gif) no-repeat right 8px; }
 #navigation ul li .dd-holder .dd-holder { top: -5px; left: 100%; }
 #navigation ul li a .hide { position: absolute; top:  19px; left:4px; height: 3px; display: none; background: #fff !important; padding: 0; z-index: 10; overflow: hidden; }
+#navigation .map-view-button { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 #navigation .buy-now { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 
 .search { position: absolute; top: 0;  right: 0; width: 191px; height: 26px; display: block; background: url(../images/search-bg.gif) no-repeat 0 0; padding: 1px 0 0 5px; }
@@ -113,5 +114,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #footer a { color: #7f7f7f; }
 #footer p.right span { padding: 0 3px; }
 
-#mapview {background-color: #4C4C4C; padding: 10px 120px 10px 120px;}
-#map_canvas {height: 450px; width: 100%}
+#mapview {background-color: #4C4C4C; height: 540px}
+#iconinstruction {position: absolute; top: 150px; left: 10px}
+#iconinstruction p {font-size: 15px; color: #ffffff;}
+#map_canvas { position:absolute; top: 140px; left: 130px; right: 0px; bottom: 5px}
