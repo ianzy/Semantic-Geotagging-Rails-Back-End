@@ -117,4 +117,4 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #mapview {background-color: #4C4C4C; height: 540px}
 #iconinstruction {position: absolute; top: 150px; left: 10px}
 #iconinstruction p {font-size: 15px; color: #ffffff;}
-#map_canvas { position:absolute; top: 140px; left: 130px; right: 0px; bottom: 5px}
+#map_canvas { height: 540px; position:absolute; top: 140px; left: 130px; right: 0px;}
