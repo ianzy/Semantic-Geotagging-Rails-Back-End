@@ -3,7 +3,7 @@
 <head>
 	<title>Semantic Geotagging</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	
 	<%= stylesheet_link_tag 'style' %>
 
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -51,52 +51,11 @@
 </head>
 <body onload="initialize()">
 <!-- Header -->
-<div id="header-mapview">
-  <div class="shell">
-    <div id="cmudmi-mapview">
-      <h1 id="cmu">Carnegie Mellon University</h1>
-      <h1 id="dmi">Disaster Management Initiative</h1>
-    </div>
-      <div id="navigation-mapview">
-        <ul>
-          <li><a href="#" class="active"><span>Home</span></a></li>
-          <li><a href="#"><span>Entities</span></a></li>
-          <li><a href="#"><span>Responses</span></a></li>
-          <li><a href="#"><span>Map</span></a>
 
-          </li>
-          <li><a href="#"><span>Contact Us</span></a>
-          </li>
-        </ul>
-        <a href="#" class="map-view-button">Map</a>
-      </div>
-      <div class="cl">&nbsp;</div>
-      
-  </div>
-</div>
-<!-- End Header -->
 <%= yield %>
 <!-- Main -->
 
 <!-- End Main -->
-<!-- Footer -->
-<div id="footer">
-	<div class="shell">
-		<p class="left">CMU SV, DMI, Semantic Geotagging, Ian Zhang</p>
-		<p class="right">
-			<a href="#">Home</a>
-			<span>|</span>
-		    <a href="#">Entities</a>
-		    <span>|</span>
-		    <a href="#">Responses</a>
-		    <span>|</span>
-		    <a href="#">Map</a>
-		    <span>|</span>
-		    <a href="#">Contact Us</a>
-	    </p>
-	    <div class="cl">&nbsp;</div>
-	</div>
-</div>
-<!-- Footer -->
+
 </body>
 </html>

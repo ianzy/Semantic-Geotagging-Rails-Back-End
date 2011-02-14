@@ -144,7 +144,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #navigation-mapview .map-view-button { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 #navigation-mapview .buy-now { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 
-#mapview {background-color: #4C4C4C; height: 540px}
-#iconinstruction {position: absolute; top: 110px; left: 10px}
-#iconinstruction p {font-size: 15px; color: #ffffff;}
-#map_canvas { height: 540px; position:absolute; top: 100px; left: 130px; right: 0px;}
+#mapview {background-color: #4C4C4C; height: 100%}
+#iconinstruction {position: absolute; top: 7px; left: 10px; bottom: 0px}
+#iconinstruction p {font-size: 15px; color: #000000;}
+#map_canvas { position:absolute; top: 7px; left: 130px; right: 0px; bottom: 0px}
