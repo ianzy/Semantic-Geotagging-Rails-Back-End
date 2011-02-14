@@ -254,14 +254,12 @@ class ApiController < ApplicationController
     <name>}+entity.title+%{</name>
     <description>
       <![CDATA[
-        <div style="width: 264px; height: 261px; z-index: 10; ">
-          <div style="width: 264px;max-height:250px;autoScroll:true ">
+          <div style="width: 264px;max-height:50px;autoScroll:true ">
             <div style="font-size: small; margin-top: 4px; ">
             <p>An earthquake is caused by a sudden slip on a fault. Stresses in the earth’s outer layer push the sides of the fault together. Stress builds up and the rocks slips suddenly, releasing energy in waves that travel through the rock to cause the shaking that we feel during an earthquake.</p>
             <p>}+entity.description+%{</p>
             </div>
           </div>
-        </div>
       ]]>
     </description>
     <Point>
