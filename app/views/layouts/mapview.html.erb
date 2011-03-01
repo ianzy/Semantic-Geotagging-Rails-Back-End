@@ -17,7 +17,7 @@
           function initialize() {
             var cmupoint = new google.maps.LatLng(37.41046,-122.059243);
             var mapOptions = {
-              zoom: 16,
+              zoom: 5,
               center: cmupoint,
               mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -25,20 +25,20 @@
                 mapOptions);
 
             // Adding the kmllayer to the map. the url is the kml file on the backend
-            var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
+            var geotaggingLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
               + '?forcerefresh='
               + Math.random(),
               ({'preserveViewport': true}));
             geotaggingLayer.setMap(map);
 
             //every 10 seconds refresh the kml layer
-            setInterval(UpdateKmlLayer, 10000, geotaggingLayer);
+            setInterval(UpdateKmlLayer, 2000, geotaggingLayer);
           }
 
           //refresh the kml layer on certain time interval
           function UpdateKmlLayer(layer) {
               
-              var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
+              var geotaggingLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
                 + '?forcerefresh='
                 + Math.random(),
                 ({'preserveViewport': true}));

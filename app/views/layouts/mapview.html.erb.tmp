@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Semantic Geotagging</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<%= stylesheet_link_tag 'style' %>
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+        <script type="text/javascript"
+            src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+
+        <script type="text/javascript">
+
+          function initialize() {
+            var cmupoint = new google.maps.LatLng(37.41046,-122.059243);
+            var mapOptions = {
+              zoom: 16,
+              center: cmupoint,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+
+            // Adding the kmllayer to the map. the url is the kml file on the backend
+            var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
+              + '?forcerefresh='
+              + Math.random(),
+              ({'preserveViewport': true}));
+            geotaggingLayer.setMap(map);
+
+            //every 10 seconds refresh the kml layer
+            setInterval(UpdateKmlLayer, 10000, geotaggingLayer);
+          }
+
+          //refresh the kml layer on certain time interval
+          function UpdateKmlLayer(layer) {
+              
+              var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
+                + '?forcerefresh='
+                + Math.random(),
+                ({'preserveViewport': true}));
+              layer.setMap(null);
+              geotaggingLayer.setMap(map);
+          }
+        </script>
+
+
+</head>
+<body onload="initialize()">
+<!-- Header -->
+<div id="header-mapview">
+  <div class="shell">
+    <div id="cmudmi-mapview">
+      <h1 id="cmu">Carnegie Mellon University</h1>
+      <h1 id="dmi">Disaster Management Initiative</h1>
+    </div>
+      <div id="navigation-mapview">
+        <ul>
+          <li><a href="#" class="active"><span>Home</span></a></li>
+          <li><a href="#"><span>Entities</span></a></li>
+          <li><a href="#"><span>Responses</span></a></li>
+          <li><a href="#"><span>Map</span></a>
+
+          </li>
+          <li><a href="#"><span>Contact Us</span></a>
+          </li>
+        </ul>
+        <a href="#" class="map-view-button">Map</a>
+      </div>
+      <div class="cl">&nbsp;</div>
+      
+  </div>
+</div>
+<!-- End Header -->
+<%= yield %>
+<!-- Main -->
+
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+	<div class="shell">
+		<p class="left">CMU SV, DMI, Semantic Geotagging, Ian Zhang</p>
+		<p class="right">
+			<a href="#">Home</a>
+			<span>|</span>
+		    <a href="#">Entities</a>
+		    <span>|</span>
+		    <a href="#">Responses</a>
+		    <span>|</span>
+		    <a href="#">Map</a>
+		    <span>|</span>
+		    <a href="#">Contact Us</a>
+	    </p>
+	    <div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- Footer -->
+</body>
+</html>
+
+
+
+
+#mapview {background-color: #4C4C4C; height: 540px}
+#iconinstruction {position: absolute; top: 110px; left: 10px}
+#iconinstruction p {font-size: 15px; color: #ffffff;}
+#map_canvas { height: 540px; position:absolute; top: 100px; left: 130px; right: 0px;}
