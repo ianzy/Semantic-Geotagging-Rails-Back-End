@@ -133,7 +133,7 @@ class ApiController < ApplicationController
   end
 
   def get_comment_categories
-    @comment_categories = CommentCategory.find :all, :order=> 'created_at'
+    @categories = CommentCategory.find :all, :order=> 'created_at'
 
     respond_to do |format|
       format.xml  { render :xml => @categories }
