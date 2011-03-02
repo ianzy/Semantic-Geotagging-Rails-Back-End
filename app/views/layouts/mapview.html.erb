@@ -25,20 +25,20 @@
                 mapOptions);
 
             // Adding the kmllayer to the map. the url is the kml file on the backend
-            var geotaggingLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
+            var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
               + '?forcerefresh='
               + Math.random(),
               ({'preserveViewport': true}));
             geotaggingLayer.setMap(map);
 
             //every 10 seconds refresh the kml layer
-            setInterval(UpdateKmlLayer, 2000, geotaggingLayer);
+            setInterval(UpdateKmlLayer, 30000, geotaggingLayer);
           }
 
           //refresh the kml layer on certain time interval
           function UpdateKmlLayer(layer) {
               
-              var geotaggingLayer = new google.maps.KmlLayer('http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss'
+              var geotaggingLayer = new google.maps.KmlLayer('http://geotagging.heroku.com/api/geoinformation.kml'
                 + '?forcerefresh='
                 + Math.random(),
                 ({'preserveViewport': true}));
