@@ -122,6 +122,7 @@ class ApiController < ApplicationController
         json_array << {:comment=>{:created_at=>"#{comment.created_at}",:image_url=>"#{comment.image_url}",
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{comment.description}",
             :comment_id=>comment.id, :category_id=>comment.category_id,
+            :counter=>comment.comments_counter,
             :entity_id=>comment.entity_id}}
     end
 
@@ -175,6 +176,7 @@ class ApiController < ApplicationController
         json_array << {:comment=>{:created_at=>"#{response.created_at}",:image_url=>"#{response.image_url}",
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{response.description}",
             :comment_id=>response.comment_id, :id=>response.id,
+            :counter=>response.comments_counter,
             :category_id=>"#{response.category_id}"}}
     end
 
