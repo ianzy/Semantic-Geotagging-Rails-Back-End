@@ -113,6 +113,7 @@ class ApiController < ApplicationController
     else
       comments = Comment.find :all,
         :conditions => [" id > ? and comment_id = -1 and entity_id = ?", since_id, entity_id],
+        :order=>"id DESC",
         :limit=>count
     end
 
@@ -222,6 +223,30 @@ class ApiController < ApplicationController
       else
         format.json { render :json => @comment.errors, :status => :unprocessable_entity }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  #Verify user password information
+  def verify_user_information
+    respond_to do |format|
+      if params[:username] && params[:password]
+        user = User.find_by_login params[:username]
+        unless user
+          format.json  { render :json => "incorrect user name or password", :status => :unprocessable_entity }
+          format.xml  { render :xml => "incorrect user name or password", :status => :unprocessable_entity }
+        end
+        
+        if user.valid_password? params[:password]
+          format.json  { render :json => user, :status => :created, :location => user }
+          format.xml { render :xml => user, :status => :created, :location => user }
+        else
+          format.json  { render :json => "incorrect user name or password", :status => :unprocessable_entity }
+          format.xml  { render :xml => "incorrect user name or password", :status => :unprocessable_entity }
+        end
+      else
+        format.json  { render :json => "incorrect user name or password", :status => :unprocessable_entity }
+        format.xml  { render :xml => "incorrect user name or password", :status => :unprocessable_entity }
       end
     end
   end
