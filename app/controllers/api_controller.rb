@@ -108,12 +108,12 @@ class ApiController < ApplicationController
     if since_id.nil?
       comments = Comment.find :all,
         :conditions=>["comment_id = -1 and entity_id = ?", entity_id],
-        :order=>"id DESC",
+        :order=>"id ASC",
         :limit=>count
     else
       comments = Comment.find :all,
         :conditions => [" id > ? and comment_id = -1 and entity_id = ?", since_id, entity_id],
-        :order=>"id DESC",
+        :order=>"id ASC",
         :limit=>count
     end
 
@@ -165,11 +165,12 @@ class ApiController < ApplicationController
     if since_id.nil?
       responses = Comment.find :all,
         :conditions => ["comment_id = ?", comment_id],
-        :order=>"id DESC",
+        :order=>"id ASC",
         :limit=>count
     else
       responses = Comment.find :all,
         :conditions => [" id > ? and comment_id = ?", since_id, comment_id],
+        :order=>"id ASC",
         :limit=>count
     end
 
