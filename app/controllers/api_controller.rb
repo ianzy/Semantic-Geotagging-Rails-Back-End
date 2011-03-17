@@ -180,7 +180,7 @@ class ApiController < ApplicationController
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{response.description}",
             :comment_id=>response.comment_id, :id=>response.id,
             :counter=>response.comments_counter,
-            :category_id=>"#{response.category_id}"}}
+            :category_id=>response.category_id}}
     end
 
     json_string = ActiveSupport::JSON.encode(json_array)
