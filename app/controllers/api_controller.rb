@@ -191,7 +191,7 @@ class ApiController < ApplicationController
   end
 
   def get_response_categories
-    @categories = ResponseCategory.all
+    @categories = ResponseCategory.find :all, :order=> 'created_at'
 
     respond_to do |format|
       format.xml  { render :xml => @categories }
