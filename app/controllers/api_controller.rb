@@ -252,6 +252,36 @@ class ApiController < ApplicationController
     end
   end
 
+  #Get categories counters by entity id
+  def get_comment_categories_counters
+    entity_id = -2
+    entity_id = params[:entity_id] if params[:entity_id]
+
+    counters = EntityCategoryCounter.find :all,
+        :conditions => ["entity_id = ?", entity_id],
+        :order=>"comment_category_id ASC"
+
+    respond_to do |format|
+      format.json { render :json => counters }
+      format.xml  { render :xml => counters }
+    end
+  end
+
+  #Get categories counters by comment id
+  def get_response_categories_counters
+    comment_id = -2
+    comment_id = params[:comment_id] if params[:comment_id]
+
+    counters = CommentCategoryCounter.find :all,
+        :conditions => ["comment_id = ?", comment_id],
+        :order=>"response_category_id ASC"
+
+    respond_to do |format|
+      format.json { render :json => counters }
+      format.xml  { render :xml => counters }
+    end
+  end
+
   #Generate kml content
   def geoinformation
     iconstyles = ""

@@ -9,13 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110305001613) do
+ActiveRecord::Schema.define(:version => 20110319030938) do
 
   create_table "comment_categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comment_categories_entities", :force => true do |t|
+    t.integer "comment_category_id"
+    t.integer "entity_id"
+    t.integer "counter"
+    t.boolean "important_tag",       :default => false
+  end
+
+  add_index "comment_categories_entities", ["comment_category_id"], :name => "index_comment_categories_entities_on_comment_category_id"
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -28,7 +37,17 @@ ActiveRecord::Schema.define(:version => 20110305001613) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "comments_counter", :default => 0
+    t.boolean  "important_tag",    :default => false
   end
+
+  create_table "comments_response_categories", :force => true do |t|
+    t.integer "comment_id"
+    t.integer "response_category_id"
+    t.integer "counter"
+    t.boolean "important_tag",        :default => false
+  end
+
+  add_index "comments_response_categories", ["response_category_id"], :name => "index_comments_response_categories_on_response_category_id"
 
   create_table "entities", :force => true do |t|
     t.string   "title"
