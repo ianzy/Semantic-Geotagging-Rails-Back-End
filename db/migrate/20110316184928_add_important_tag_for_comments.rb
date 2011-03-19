@@ -1,6 +1,6 @@
 class AddImportantTagForComments < ActiveRecord::Migration
   def self.up
-    add_column :comments, :important_tag, :boolean, :default => 0
+    add_column :comments, :important_tag, :boolean, :default => false
   end
 
   def self.down
