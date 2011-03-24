@@ -125,6 +125,7 @@ class ApiController < ApplicationController
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{comment.description}",
             :comment_id=>comment.id, :category_id=>comment.category_id,
             :counter=>comment.comments_counter,
+            :important_tag=>comment.important_tag,
             :entity_id=>comment.entity_id}}
     end
 
@@ -181,6 +182,7 @@ class ApiController < ApplicationController
             :username=>"#{user.login}", :user_image=>"#{user.user_image}", :description=>"#{response.description}",
             :comment_id=>response.comment_id, :id=>response.id,
             :counter=>response.comments_counter,
+            :important_tag=>response.important_tag,
             :category_id=>response.category_id}}
     end
 
