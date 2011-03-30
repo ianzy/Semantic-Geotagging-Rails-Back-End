@@ -74,6 +74,7 @@ class ApiController < ApplicationController
     count = 20
     count = params[:count] if params[:count]
     since_id = params[:since_id] if params[:since_id]
+    
 #    max_id = params[:max_id] unless params[:max_id]
     if since_id.nil?
       @entities = Entity.find :all, :limit=>count
@@ -85,6 +86,7 @@ class ApiController < ApplicationController
     respond_to do |format|
       format.xml  { render :xml => @entities }
       format.json { render :json => @entities }
+      format.js { render_json_with_callback @entities.to_json }
     end
   end
 
@@ -337,6 +339,22 @@ class ApiController < ApplicationController
 
     
     render :xml => kml
+  end
+  
+  
+  private
+  def render_json_with_callback(json, options={})
+    # support callback on json
+    callback = params[:callback]
+
+    response = begin
+      if callback
+        "#{callback}(#{json});"
+      else
+        json
+      end
+    end
+    render({:content_type => :js, :text => response}.merge(options))
   end
 
 end
