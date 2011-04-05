@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def index
     entity = Entity.find(params[:entity_id])
     category_id = params[:category_id]
-    @comments = comments.all if params[:entity_id].nil? || params[:category_id].nil?
+    @comments = Comment.all if params[:entity_id].nil? || params[:category_id].nil?
     @comments = entity.comments.find_all_by_category_id category_id
 
     respond_to do |format|
