@@ -2,7 +2,9 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    @comments = Comment.all
+    entity = Entity.find(params[:entity_id])
+    category_id = params[:category_id]
+    @comments = entity.comments.find_all_by_category_id category_id
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,10 +13,24 @@ class CommentsController < ApplicationController
     end
   end
 
+  def responses
+    comment = Comment.find params[:comment_id]
+    category_id = params[:category_id]
+    @responses = comment.comments.find_all_by_category_id category_id
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @responses }
+      format.json { render :json => @responses }
+    end
+  end
+
   # GET /comments/1
   # GET /comments/1.xml
   def show
     @comment = Comment.find(params[:id])
+    @categories = CommentCategoryCounter.find_all_by_comment_id @comment,
+      :order=>"id ASC"
 
     respond_to do |format|
       format.html # show.html.erb

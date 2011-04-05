@@ -28,6 +28,13 @@
   <%=h @entity.lng %>
 </p>
 
+<p>Categories:</p>
+<% @categories.each do |category| %>
+  <p>
+    <%= link_to category.comment_category.name,
+      comments_path(:entity_id=>@entity, :category_id=>category) %> <%= "(#{category.counter})" %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_entity_path(@entity) %> |
 <%= link_to 'Back', entities_path %>

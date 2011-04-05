@@ -33,6 +33,13 @@
   <%=h @comment.description %>
 </p>
 
+<p>Categories:</p>
+<% @categories.each do |category| %>
+  <p>
+    <%= link_to category.response_category.name,
+      comment_responses_path(:comment_id=>@comment, :category_id=>category) %> <%= "(#{category.counter})" %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>

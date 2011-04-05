@@ -3,4 +3,5 @@
 
 class EntityCategoryCounter < ActiveRecord::Base
   set_table_name 'comment_categories_entities'
+  belongs_to :comment_category
 end

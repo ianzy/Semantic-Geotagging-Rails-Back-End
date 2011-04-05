@@ -44,7 +44,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :comment_categories
 
-  map.resources :comments
+  #map.resources :products, :member => { :detailed => :get }
+  map.resources :comments do |comments|
+    comments.responses 'responses',
+      :controller=>'comments', :action=>'responses'
+  end
 
   map.resources :icons
 
@@ -52,7 +56,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :responses
 
-  map.resources :entities
+  map.resources :entities do |entities|
+    entities.resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 

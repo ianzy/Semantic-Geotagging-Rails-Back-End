@@ -18,7 +18,8 @@ class EntitiesController < ApplicationController
   # GET /entities/1.xml
   def show
     @entity = Entity.find(params[:id])
-
+    @categories = EntityCategoryCounter.find_all_by_entity_id @entity,
+      :order=>"id ASC"
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entity }

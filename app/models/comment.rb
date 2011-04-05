@@ -1,6 +1,8 @@
 class Comment < ActiveRecord::Base
   has_many :comments
-  
+  belongs_to :entity
+  belongs_to :comment
+
   after_create  :increment_counter_cache
   after_destroy :decrement_counter_cache
 
@@ -10,14 +12,14 @@ class Comment < ActiveRecord::Base
     if self.entity_id != -1
       @counter = EntityCategoryCounter.find_by_entity_id_and_comment_category_id self.entity_id, self.category_id
       counts = @counter.counter - 1
-      result = Comment.count ["important_tag = 1 and entity_id = ?", self.entity_id]
+      result = Comment.count ["important_tag = true and entity_id = ?", self.entity_id]
       important_tag_for_category = @counter.important_tag
       important_tag_for_category = false if result == 0
       @counter.update_attributes(:counter=>counts, :important_tag=>important_tag_for_category)
     else
       @counter = CommentCategoryCounter.find_by_comment_id_and_response_category_id self.comment_id, self.category_id
       counts = @counter.counter - 1
-      result = Comment.count ["important_tag = 1 and entity_id = ?", self.entity_id]
+      result = Comment.count ["important_tag = true and entity_id = ?", self.entity_id]
       important_tag_for_category = @counter.important_tag
       important_tag_for_category = false if result == 0
       @counter.update_attributes(:counter=>counts, :important_tag=>important_tag_for_category)
