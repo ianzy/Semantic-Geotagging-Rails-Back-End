@@ -4,9 +4,12 @@ class CommentsController < ApplicationController
   def index
     entity = Entity.find(params[:entity_id]) if params[:entity_id]
     category_id = params[:category_id] if params[:category_id]
-    @comments = Comment.all if params[:entity_id].nil? || params[:category_id].nil?
-    @comments = entity.comments.find_all_by_category_id category_id
-
+    if params[:entity_id].nil? || params[:category_id].nil?
+      @comments = Comment.all 
+    else
+      @comments = entity.comments.find_all_by_category_id category_id
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @comments }
