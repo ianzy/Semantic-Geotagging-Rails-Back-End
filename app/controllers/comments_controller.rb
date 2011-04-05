@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    entity = Entity.find(params[:entity_id])
-    category_id = params[:category_id]
+    entity = Entity.find(params[:entity_id]) if params[:entity_id]
+    category_id = params[:category_id] if params[:category_id]
     @comments = Comment.all if params[:entity_id].nil? || params[:category_id].nil?
     @comments = entity.comments.find_all_by_category_id category_id
 
