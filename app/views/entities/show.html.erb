@@ -24,7 +24,7 @@
   <div class="category">
     <div class="category-name">
     <%= link_to category.comment_category.name,
-      comments_path(:entity_id=>@entity, :category_id=>category) %>
+      comments_path(:entity_id=>@entity, :category_id=>category.comment_category_id) %>
     </div>
     <div class="counter">
       <%= "(#{category.counter})" %>
