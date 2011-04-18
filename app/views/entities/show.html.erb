@@ -1,16 +1,10 @@
-<p>
-  <b>Title:</b>
+<div class="entity-content">
+<p class="descriptive-content">
   <%=h @entity.title %>
 </p>
 
-<p>
-  <b>Description:</b>
+<p class="descriptive-content">
   <%=h @entity.description %>
-</p>
-
-<p>
-  <b>Icon uri:</b>
-  <%=h @entity.icon_uri %>
 </p>
 
 <p>
@@ -21,19 +15,21 @@
 <p>
   <b>Lat:</b>
   <%=h @entity.lat %>
-</p>
-
-<p>
   <b>Lng:</b>
   <%=h @entity.lng %>
 </p>
-
-<p>Categories:</p>
+</div>
+<p class="descriptive-instruction">Categories: a long description of the instruction</p>
 <% @categories.each do |category| %>
-  <p>
+  <div class="category">
+    <div class="category-name">
     <%= link_to category.comment_category.name,
-      comments_path(:entity_id=>@entity, :category_id=>category) %> <%= "(#{category.counter})" %>
-  </p>
+      comments_path(:entity_id=>@entity, :category_id=>category) %>
+    </div>
+    <div class="counter">
+      <%= "(#{category.counter})" %>
+    </div>
+  </div>
 <% end %>
 
 <%= link_to 'Edit', edit_entity_path(@entity) %> |

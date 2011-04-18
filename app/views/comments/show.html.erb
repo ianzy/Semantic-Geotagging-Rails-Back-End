@@ -1,44 +1,25 @@
-<p>
-  <b>User:</b>
-  <%=h @comment.user_id %>
+<div class="entity-content">
+<p class="descriptive-content">
+  <%=h @comment.user.login %> said,
 </p>
 
-<p>
-  <b>Entity:</b>
-  <%=h @comment.entity_id %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%=h @comment.category_id %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%=h @comment.image_url %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%=h @comment.comment_id %>
-</p>
-
-<p>
-  <b>Type:</b>
-  <%=h @comment.type %>
-</p>
-
-<p>
-  <b>Description:</b>
+<p class="descriptive-content">
   <%=h @comment.description %>
 </p>
+</div>
 
-<p>Categories:</p>
+<p class="descriptive-instruction">Categories: a long description of the instruction</p>
+
 <% @categories.each do |category| %>
-  <p>
+  <div class="category">
+    <div class="category-name">
     <%= link_to category.response_category.name,
-      comment_responses_path(:comment_id=>@comment, :category_id=>category) %> <%= "(#{category.counter})" %>
-  </p>
+      comment_responses_path(:comment_id=>@comment, :category_id=>category) %>
+    </div>
+    <div class="counter">
+      <%= "(#{category.counter})" %>
+    </div>
+  </div>
 <% end %>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |

@@ -314,7 +314,7 @@ class ApiController < ApplicationController
       kml = kml +
 %{
   <Placemark>
-    <styleUrl>#}+entity.icon_uri+%{</styleUrl>
+    <styleUrl>#}+entity.icon_name+%{</styleUrl>
     <name>}+entity.title+%{</name>
     <description>
       <![CDATA[

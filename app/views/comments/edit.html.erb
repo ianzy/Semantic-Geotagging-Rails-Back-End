@@ -20,6 +20,10 @@
     <%= f.text_field :image_url %>
   </p>
   <p>
+    <%= f.label :important_tag %><br />
+    <%= f.text_field :important_tag %>
+  </p>
+  <p>
     <%= f.label :comment_id %><br />
     <%= f.text_field :comment_id %>
   </p>
@@ -37,4 +41,4 @@
 <% end %>
 
 <%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', comments_path(:entity_id=>@comment.entity_id, :category_id=>@comment.category_id) %>

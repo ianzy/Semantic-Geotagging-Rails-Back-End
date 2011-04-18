@@ -1,32 +1,20 @@
-<h1>Listing responses</h1>
-
-<table>
-  <tr>
-    <th>User</th>
-    <th>Entity</th>
-    <th>Category</th>
-    <th>Image url</th>
-    <th>Comment</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-
 <% @responses.each do |response| %>
-  <tr>
-    <td><%=h response.user_id %></td>
-    <td><%=h response.entity_id %></td>
-    <td><%=h response.category_id %></td>
-    <td><%=h response.image_url %></td>
-    <td><%=h response.comment_id %></td>
-    <td><%=h response.type %></td>
-    <td><%=h response.description %></td>
-    <td><%= link_to 'Show', response %></td>
-    <td><%= link_to 'Edit', edit_comment_path(response) %></td>
-    <!--<td><%= link_to 'Destroy', response, :confirm => 'Are you sure?', :method => :delete %></td>-->
-  </tr>
-<% end %>
-</table>
+  <div class="comment-item">
+    <div class="comment-item-header">
+      <div class="comment-item-name"><%=h response.user.login if response.user %></div>
+      <div class="comment-item-time"><%=h response.created_at %></div>
+    </div>
 
-<br />
+    <div class="comment-item-main">
+      <div class="comment-item-content"><%=h response.description %></div>
+      <div class="comment-item-counter"><%=h response.comments_counter%> more follow up responses</div>
+      <%= link_to 'Show', response %> |
+      <%= link_to 'Edit', edit_comment_path(response) %> |
+      <%= link_to 'Destroy', response, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+
+
 
 <%= link_to 'New response', new_comment_path %>

@@ -35,6 +35,19 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @categories = CommentCategoryCounter.find_all_by_comment_id @comment,
       :order=>"id ASC"
+    
+    if @categories.empty?
+        categories = ResponseCategory.find :all, :order=> 'created_at'
+        categories.each do |category|
+          CommentCategoryCounter.create(
+          :response_category_id => category.id,
+          :comment_id => @comment.id,
+          :counter => 0,
+          :important_tag => false)
+        end
+        @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"id ASC"
+        p @categories
+    end
 
     respond_to do |format|
       format.html # show.html.erb

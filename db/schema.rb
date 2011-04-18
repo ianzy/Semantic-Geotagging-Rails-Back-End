@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110405092927) do
+ActiveRecord::Schema.define(:version => 20110417200154) do
 
   create_table "comment_categories", :force => true do |t|
     t.string   "name"
@@ -49,16 +49,8 @@ ActiveRecord::Schema.define(:version => 20110405092927) do
 
   add_index "comments_response_categories", ["response_category_id"], :name => "index_comments_response_categories_on_response_category_id"
 
-  create_table "entities", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "icon_uri"
-    t.string   "location"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "entities" because of following StandardError
+#   Unknown type 'stirng' for column 'icon_name'
 
   create_table "icons", :force => true do |t|
     t.string   "name"

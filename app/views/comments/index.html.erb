@@ -1,4 +1,21 @@
-<h1>Listing comments</h1>
+<% @comments.each do |comment| %>
+  <div class="comment-item">
+    <div class="comment-item-header">
+      <div class="comment-item-name"><%=h comment.user.login if comment.user %></div>
+      <div class="comment-item-time"><%=h comment.created_at %></div>
+    </div>
+    
+    <div class="comment-item-main">
+      <div class="comment-item-content"><%=h comment.description %></div>
+      <div class="comment-item-counter"><%=h comment.comments_counter%> more follow up responses</div>
+      <%= link_to 'Show', comment %> | 
+      <%= link_to 'Edit', edit_comment_path(comment) %> |
+      <%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+
+<!--<h1>Listing comments</h1>
 
 <table>
   <tr>
@@ -27,6 +44,6 @@
 <% end %>
 </table>
 
-<br />
+<br />-->
 
 <%= link_to 'New comment', new_comment_path %>

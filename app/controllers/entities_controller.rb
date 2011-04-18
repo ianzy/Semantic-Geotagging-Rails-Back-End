@@ -1,5 +1,5 @@
 class EntitiesController < ApplicationController
-  layout 'application'
+#  layout 'application'
 
 #  before_filter :require_http_auth_user
   # GET /entities

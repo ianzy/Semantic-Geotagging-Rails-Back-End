@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; outline:0; }
+
+body {
+    font-size: 12px;
+    line-height: 22px;
+    font-family: Arial, Helvetica, Sans-Serif;
+    color: #4c4c4c;
+    background: #fff;
+/*    border-top: 6px solid #B22222;*/
+}
+
+a { color: #0252aa; text-decoration: none; cursor:pointer; }
+a:hover { text-decoration: underline; }
+a img { border: 0; }
+
+#header { height: 40px; border-bottom: 1px solid #DDD; background: #B22222;}
+#header .shell { position: relative; height: 132px; z-index: 5; }
+
+.entity-content {margin: 10px;}
+.descriptive-content { font-size: 24px; padding-bottom: 5px}
+.descriptive-instruction { background: #909090; color: #FFFFFF}
+
+.category {font-size: 24px; border-bottom: 1px solid #000000; height: 32px; padding: 10px;}
+.category-name {float: left;}
+.counter {float:right;}
+
+.comment-item {border-bottom: 1px solid #000000; padding: 10px;}
+.comment-item-header {font-size: 12px; width: 100%; float: left}
+.comment-item-name {float: left}
+.comment-item-time {float: right}
+.comment-item-content {font-size: 20px; }
+.comment-item-counter {font-size: 14px; }
