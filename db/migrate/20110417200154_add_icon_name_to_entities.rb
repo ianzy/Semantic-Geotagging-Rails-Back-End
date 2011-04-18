@@ -1,6 +1,6 @@
 class AddIconNameToEntities < ActiveRecord::Migration
   def self.up
-    add_column :entities, :icon_name, :stirng
+    add_column :entities, :icon_name, :string
   end
 
   def self.down
