@@ -20,6 +20,19 @@ class EntitiesController < ApplicationController
     @entity = Entity.find(params[:id])
     @categories = EntityCategoryCounter.find_all_by_entity_id @entity,
       :order=>"id ASC"
+
+    if @categories.empty?
+      categories = CommentCategory.find :all, :order=> 'created_at'
+      categories.each do |category|
+        EntityCategoryCounter.create(
+        :comment_category_id => category.id,
+        :entity_id => @entity.id,
+        :counter => 0,
+        :important_tag => false)
+      end
+      @categories = EntityCategoryCounter.find_all_by_entity_id @entity,
+        :order=>"id ASC"
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entity }
