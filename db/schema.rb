@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110417200154) do
+ActiveRecord::Schema.define(:version => 20110428024337) do
 
   create_table "comment_categories", :force => true do |t|
     t.string   "name"
@@ -44,7 +44,8 @@ ActiveRecord::Schema.define(:version => 20110417200154) do
     t.integer "comment_id"
     t.integer "response_category_id"
     t.integer "counter"
-    t.boolean "important_tag",        :default => false
+    t.boolean "important_tag",          :default => false
+    t.string  "response_category_name"
   end
 
   add_index "comments_response_categories", ["response_category_id"], :name => "index_comments_response_categories_on_response_category_id"

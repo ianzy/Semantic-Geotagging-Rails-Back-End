@@ -278,7 +278,7 @@ class ApiController < ApplicationController
 
     counters = CommentCategoryCounter.find :all,
         :conditions => ["comment_id = ?", comment_id],
-        :order=>"response_category_id ASC"
+        :order=>"response_category_name ASC"
 
     respond_to do |format|
       format.json { render :json => counters }
