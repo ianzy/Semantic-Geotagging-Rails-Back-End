@@ -43,9 +43,10 @@ class CommentsController < ApplicationController
           :response_category_id => category.id,
           :comment_id => @comment.id,
           :counter => 0,
-          :important_tag => false)
+          :important_tag => false,
+          :response_category_name => category.name)
         end
-        @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"id ASC"
+        @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"response_category_name ASC"
         p @categories
     end
 
