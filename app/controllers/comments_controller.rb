@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
   def show
     @comment = Comment.find(params[:id])
     @categories = CommentCategoryCounter.find_all_by_comment_id @comment,
-      :order=>"id ASC"
+      :order=>"response_category_name ASC"
     
     if @categories.empty?
         categories = ResponseCategory.find :all, :order=> 'created_at'
