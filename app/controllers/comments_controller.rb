@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     if params[:entity_id].nil? || params[:category_id].nil?
       @comments = Comment.all 
     else
+      session[:comment_id] = nil
       entity = Entity.find(params[:entity_id])
       session[:entity_id] = params[:entity_id]
       session[:category_id] = category_id = params[:category_id]
