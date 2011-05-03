@@ -1,3 +1,10 @@
+<% content_for :header_content do%>
+  <div id="header-text">
+    Semantic Geotagging
+  </div>
+  <%= link_to(image_tag("/images/home_image.png", {:alt => 'example', :id=>"header-img-home"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
+<% end %>
+
 <div class="entity-content">
 <p class="descriptive-content">
   <%=h @entity.title %>
@@ -19,7 +26,7 @@
   <%=h @entity.lng %>
 </p>
 </div>
-<p class="descriptive-instruction">Categories: a long description of the instruction</p>
+<p class="descriptive-instruction">Select a category to view or add information.</p>
 <% @categories.each do |category| %>
   <div class="category">
     <div class="category-name">

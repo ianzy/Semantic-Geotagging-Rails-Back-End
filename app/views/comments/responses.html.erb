@@ -1,3 +1,11 @@
+<% content_for :header_content do %>
+  <%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), comment_path(session[:comment_id]) %>
+  <div id="header-text">
+    <%=h @category.name %>
+  </div>
+  <%= link_to(image_tag("/images/home_image.png", {:alt => 'example', :id=>"header-img-home"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
+<% end %>
+
 <% @responses.each do |response| %>
   <div class="comment-item">
     <div class="comment-item-header">

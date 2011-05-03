@@ -1,3 +1,15 @@
+<% content_for :header_content do %>
+  <% if @comment.entity_id != -1 %>
+  <%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), comments_path(:entity_id=>@comment.entity_id, :category_id=>@comment.category_id) %>
+  <% else %>
+  <%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), comment_responses_path(@comment.comment_id, :category_id=>@comment.category_id) %>
+  <% end %>
+  <div id="header-text">
+    Follow up responses
+  </div>
+  <%= link_to(image_tag("/images/home_image.png", {:alt => 'example', :id=>"header-img-home"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
+<% end %>
+
 <div class="entity-content">
 <p class="descriptive-content">
   <%=h @comment.user.login %> said,
@@ -8,7 +20,7 @@
 </p>
 </div>
 
-<p class="descriptive-instruction">Categories: a long description of the instruction</p>
+<p class="descriptive-instruction">Select a category to view or add follow up responses.</p>
 
 <% @categories.each do |category| %>
   <div class="category">
@@ -23,4 +35,8 @@
 <% end %>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<% if @comment.entity_id != -1 %>
+<%= link_to 'Back', comments_path(:entity_id=>@comment.entity_id, :category_id=>@comment.category_id) %>
+<% else %>
+<%= link_to 'Back', comment_responses_path(@comment.comment_id, :category_id=>@comment.category_id) %>
+<% end %>

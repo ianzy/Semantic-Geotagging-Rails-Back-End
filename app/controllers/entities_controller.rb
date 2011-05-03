@@ -18,6 +18,7 @@ class EntitiesController < ApplicationController
   # GET /entities/1.xml
   def show
     @entity = Entity.find(params[:id])
+    session[:home_entity_id]=params[:id]
     @categories = EntityCategoryCounter.find_all_by_entity_id @entity,
       :order=>"id ASC"
 

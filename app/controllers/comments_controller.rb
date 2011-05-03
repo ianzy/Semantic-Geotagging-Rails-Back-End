@@ -2,11 +2,13 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    entity = Entity.find(params[:entity_id]) if params[:entity_id]
-    category_id = params[:category_id] if params[:category_id]
     if params[:entity_id].nil? || params[:category_id].nil?
       @comments = Comment.all 
     else
+      entity = Entity.find(params[:entity_id])
+      session[:entity_id] = params[:entity_id]
+      session[:category_id] = category_id = params[:category_id]
+      @category = CommentCategory.find(category_id)
       @comments = entity.comments.find_all_by_category_id category_id
     end
     
@@ -19,7 +21,9 @@ class CommentsController < ApplicationController
 
   def responses
     comment = Comment.find params[:comment_id]
+    session[:comment_id] = params[:comment_id]
     category_id = params[:category_id]
+    @category = ResponseCategory.find(category_id)
     @responses = comment.comments.find_all_by_category_id category_id
 
     respond_to do |format|
@@ -47,7 +51,6 @@ class CommentsController < ApplicationController
           :response_category_name => category.name)
         end
         @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"response_category_name ASC"
-        p @categories
     end
 
     respond_to do |format|
@@ -60,6 +63,15 @@ class CommentsController < ApplicationController
   # GET /comments/new.xml
   def new
     @comment = Comment.new
+    if session[:comment_id]
+      @comment.comment_id = session[:comment_id]
+      @comment.entity_id = -1
+    else
+      @comment.entity_id = session[:entity_id]
+      @comment.comment_id = -1
+    end
+    
+    @comment.category_id = session[:category_id]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -79,6 +91,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        session[:entity_id] = nil
+        session[:category_id] = nil
+        session[:comment_id] = nil
         format.html { redirect_to(@comment, :notice => 'Comment was successfully created.') }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else

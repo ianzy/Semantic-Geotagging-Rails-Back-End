@@ -1,3 +1,15 @@
+<% content_for :header_content do %>
+  <% if @comment.entity_id != -1 %>
+  <%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), comments_path(:entity_id=>@comment.entity_id, :category_id=>@comment.category_id) %>
+  <% else %>
+  <%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), comment_responses_path(@comment.comment_id, :category_id=>@comment.category_id) %>
+  <% end %>
+  <div id="header-text">
+    Semantic Geotagging
+  </div>
+  <%= link_to(image_tag("/images/home_image.png", {:alt => 'example', :id=>"header-img-home"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
+<% end %>
+
 <h1>New comment</h1>
 
 <% form_for(@comment) do |f| %>
@@ -40,4 +52,8 @@
   </p>
 <% end %>
 
+<% if @comment.entity_id != -1 %>
 <%= link_to 'Back', comments_path(:entity_id=>@comment.entity_id, :category_id=>@comment.category_id) %>
+<% else %>
+<%= link_to 'Back', comment_responses_path(@comment.comment_id, :category_id=>@comment.category_id) %>
+<% end %>
