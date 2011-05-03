@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
   def responses
     comment = Comment.find params[:comment_id]
     session[:comment_id] = params[:comment_id]
-    category_id = params[:category_id]
+    session[:category_id] = category_id = params[:category_id]
     @category = ResponseCategory.find(category_id)
     @responses = comment.comments.find_all_by_category_id category_id
 
