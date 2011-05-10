@@ -1,7 +1,7 @@
 class EntitiesController < ApplicationController
 #  layout 'application'
 
-#  before_filter :require_http_auth_user
+before_filter :require_user
   # GET /entities
   # GET /entities.xml
   def index

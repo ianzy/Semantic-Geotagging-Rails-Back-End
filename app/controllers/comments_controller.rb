@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+
+  before_filter :require_user
   # GET /comments
   # GET /comments.xml
   def index
@@ -64,6 +66,7 @@ class CommentsController < ApplicationController
   # GET /comments/new.xml
   def new
     @comment = Comment.new
+    @comment.user_id = current_user.id
     if session[:comment_id]
       @comment.comment_id = session[:comment_id]
       @comment.entity_id = -1
