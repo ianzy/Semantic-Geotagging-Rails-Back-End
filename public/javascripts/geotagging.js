@@ -22,7 +22,7 @@ function geotaggingInitialize() {
 
 			markerArray[i].id = data[i].entity.id;
 			markerArray[i].updated_at = data[i].entity.updated_at;
-			markerArray[i].html = '<b>' + data[i].entity.title + '</b><br/>' + data[i].entity.description + '<br/>' + "<a href='#' onClick=\"window.open('http://geotagging.heroku.com/entities/" + data[i].entity.id + "', '_blank', 'width=400,height=600,resizable=no'); return false;\">Detail</a>";
+			markerArray[i].html = '<div style="font-size: 32px;line-height: 36px;"><b>' + data[i].entity.title + '</b><br/>' + data[i].entity.description + '<br/>' + "<a href='#' onClick=\"window.open('http://geotagging.heroku.com/entities/" + data[i].entity.id + "', '_blank', 'width=400,height=600,resizable=no'); return false;\">Detail</a></div>";
 	  		markerArray[i].set("icon", data[i].entity.icon_uri);
 
 
@@ -107,7 +107,7 @@ function updateMarkers() {
   			
   			markerArrayCopy[i].id = data[i].entity.id;
   			markerArrayCopy[i].updated_at = data[i].entity.updated_at;
-  			markerArrayCopy[i].html = '<b>' + data[i].entity.title + '</b><br/>' + data[i].entity.description + '<br/>' + "<a href='#' onClick=\"window.open('http://geotagging.heroku.com/entities/" + data[i].entity.id + "', '_blank', 'width=400,height=600,resizable=no'); return false;\">Detail</a>";
+  			markerArrayCopy[i].html = '<div style="font-size: 32px;line-height: 36px;"><b>' + data[i].entity.title + '</b><br/>' + data[i].entity.description + '<br/>' + "<a href='#' onClick=\"window.open('http://geotagging.heroku.com/entities/" + data[i].entity.id + "', '_blank', 'width=400,height=600,resizable=no'); return false;\">Detail</a></div>";
   			markerArrayCopy[i].set("icon",data[i].entity.icon_uri);
 
 
