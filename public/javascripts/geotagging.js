@@ -107,7 +107,7 @@ function updateMarkers() {
   			
   			markerArrayCopy[i].id = data[i].entity.id;
   			markerArrayCopy[i].updated_at = data[i].entity.updated_at;
-  			markerArrayCopy[i].html = 'Description <br/>' + data[i].entity.title + '<br/>' + data[i].entity.description + '<br/>' + 'LINK to update from COP';
+  			markerArrayCopy[i].html = '<b>' + data[i].entity.title + '</b><br/>' + data[i].entity.description + '<br/>' + "<a href='#' onClick=\"window.open('http://geotagging.heroku.com/entities/" + data[i].entity.id + "', '_blank', 'width=400,height=600,resizable=no'); return false;\">Detail</a>";
   			markerArrayCopy[i].set("icon",data[i].entity.icon_uri);
 
 
