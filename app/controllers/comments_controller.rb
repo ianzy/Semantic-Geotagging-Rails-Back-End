@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
       session[:entity_id] = params[:entity_id]
       session[:category_id] = category_id = params[:category_id]
       @category = CommentCategory.find(category_id)
-      @comments = entity.comments.find_all_by_category_id category_id
+      @comments = entity.comments.find_all_by_category_id category_id, :order=> 'created_at DSC'
     end
     
     respond_to do |format|
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
     session[:comment_id] = params[:comment_id]
     session[:category_id] = category_id = params[:category_id]
     @category = ResponseCategory.find(category_id)
-    @responses = comment.comments.find_all_by_category_id category_id
+    @responses = comment.comments.find_all_by_category_id category_id, :order=> 'created_at DSC'
 
     respond_to do |format|
       format.html

@@ -48,16 +48,6 @@ function updateMarkers() {
   	});
 
     $.getJSON('http://geotagging.heroku.com/api/entities.js?callback=?', function(data) {
-    //$.getJSON('C:/json.txt', function(data) {
-  	//console.log("updateMarkers: number of entities from server: " + data.length);
-  	//console.log("updateMarkers: number of entities on client: " + markerArray.length);
-
-  	// for(var j= 0; j<markerArray.length; j++)
-  	// {
-  	//   	console.log("entity id on client: " + markerArray[j].id);
-  	// }
-
-  	// adding new entity to COP client
   	for(var i=0; i<data.length; i++)
   	{
   	 	//console.log("entity id on server: " + data[i].entity.id);
