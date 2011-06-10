@@ -16,7 +16,7 @@
     <div class="comment-item-main">
       <div class="comment-item-content"><%=h comment.description %></div>
       <div class="comment-item-counter"><%=h comment.comments_counter%> more follow up responses</div>
-      <%= link_to 'Show', comment %> | 
+      <%= link_to 'Follow up responses', comment %> |
       <%= link_to 'Edit', edit_comment_path(comment) %> |
       <%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %>
     </div>
