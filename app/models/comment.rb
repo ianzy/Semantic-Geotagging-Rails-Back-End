@@ -58,7 +58,8 @@ class Comment < ActiveRecord::Base
           :response_category_id => category.id,
           :comment_id => self.comment_id,
           :counter => 0,
-          :important_tag => false)
+          :important_tag => false,
+          :response_category_name => category.name)
         end
         @counter = CommentCategoryCounter.find_by_comment_id_and_response_category_id self.comment_id, self.category_id
       end
