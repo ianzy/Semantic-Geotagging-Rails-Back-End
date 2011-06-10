@@ -41,7 +41,7 @@ class CommentsController < ApplicationController
   def show
     @comment = Comment.find(params[:id])
     @categories = CommentCategoryCounter.find_all_by_comment_id @comment,
-      :order=>"response_category_name ASC"
+      :order=>"response_category_name DESC"
     
     if @categories.empty?
         categories = ResponseCategory.find :all, :order=> 'created_at'
@@ -53,7 +53,7 @@ class CommentsController < ApplicationController
           :important_tag => false,
           :response_category_name => category.name)
         end
-        @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"response_category_name DESC"
+        @categories = CommentCategoryCounter.find_all_by_comment_id @comment, :order=>"response_category_name ASC"
     end
 
     respond_to do |format|
