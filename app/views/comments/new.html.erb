@@ -46,6 +46,10 @@
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+	<%= f.hidden_field :user_id %>
+	<%= f.hidden_field :entity_id %>
+	<%= f.hidden_field :category_id %>
+	<%= f.hidden_field :comment_id %>
   </p>
   <p>
     <%= f.submit 'Create' %>

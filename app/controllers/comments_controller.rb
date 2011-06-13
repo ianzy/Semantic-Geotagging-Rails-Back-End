@@ -91,6 +91,8 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.xml
   def create
+    puts "1111111111111111111111111111"
+    p params[:comment]
     @comment = Comment.new(params[:comment])
 
     respond_to do |format|
