@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428024337) do
+ActiveRecord::Schema.define(:version => 20110717220728) do
 
   create_table "comment_categories", :force => true do |t|
     t.string   "name"
@@ -66,26 +66,6 @@ ActiveRecord::Schema.define(:version => 20110428024337) do
     t.datetime "updated_at"
   end
 
-  create_table "resps", :force => true do |t|
-    t.integer  "entity_id"
-    t.string   "username"
-    t.datetime "time"
-    t.text     "resp"
-    t.string   "lang"
-    t.string   "image"
-    t.string   "source"
-    t.string   "location"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "temp_time_markers", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login",                                                                                           :null => false
     t.string   "email",                                                                                           :null => false
@@ -105,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20110428024337) do
     t.datetime "updated_at"
     t.datetime "current_entity_time", :default => '2010-10-08 07:59:46',                                          :null => false
     t.string   "user_image",          :default => "http://selfsolved.com/images/icons/default_user_icon_128.png"
+    t.string   "role"
   end
 
 end

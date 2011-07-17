@@ -1,4 +1,5 @@
 class CommentCategoriesController < ApplicationController
+  before_filter :require_admin
   # GET /comment_categories
   # GET /comment_categories.xml
   def index

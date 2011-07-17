@@ -1,12 +1,10 @@
+# http://blog.leetsoft.com/2006/5/29/easy-migration-between-databases
 namespace :db do
   namespace :backup do
-    
     def interesting_tables
-      ActiveRecord::Base.connection.tables.sort.reject! do |tbl|
-        ['schema_info', 'sessions', 'public_exceptions'].include?(tbl)
-      end
-
-      ['entities','resps','schema_migrations']
+      tables = ActiveRecord::Base.connection.tables.sort
+      tables.delete("schema_migrations")
+      tables
     end
     
     desc "Dump entire db."
@@ -19,7 +17,12 @@ namespace :db do
     
       interesting_tables.each do |tbl|
         next if tbl.nil?
+        tbl = "EntityCategoryCounter" if tbl == "comment_categories_entities"
+        tbl = "CommentCategoryCounter" if tbl == "comments_response_categories" 
         klass = tbl.classify.constantize
+        tbl = "comment_categories_entities" if tbl == "EntityCategoryCounter"
+        tbl = "comments_response_categories" if tbl == "CommentCategoryCounter"
+        
         puts "Writing #{tbl}..."
         File.open("#{tbl}.yml", 'w+') { |f| YAML.dump klass.find(:all).collect(&:attributes), f }      
       end
@@ -33,8 +36,13 @@ namespace :db do
       FileUtils.chdir(dir)
     
       interesting_tables.each do |tbl|
-
+        tbl = "EntityCategoryCounter" if tbl == "comment_categories_entities"
+        tbl = "CommentCategoryCounter" if tbl == "comments_response_categories"
         klass = tbl.classify.constantize
+        klass.delete_all
+        tbl = "comment_categories_entities" if tbl == "EntityCategoryCounter"
+        tbl = "comments_response_categories" if tbl == "CommentCategoryCounter"
+        
         ActiveRecord::Base.transaction do 
         
           puts "Loading #{tbl}..."
@@ -43,8 +51,6 @@ namespace :db do
           end        
         end
       end
-    
     end
-  
   end
 end

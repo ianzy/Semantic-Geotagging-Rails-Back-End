@@ -17,16 +17,14 @@
     </div>
       <div id="navigation">
         <ul>
-          <li><a href="#" class="active"><span>Home</span></a></li>
-          <li><a href="#"><span>Entities</span></a></li>
-          <li><a href="#"><span>Responses</span></a></li>
-          <li><a href="#"><span>Map</span></a>
-       
-          </li>
-          <li><a href="#"><span>Contact Us</span></a>
-          </li>
+          <li><%= link_to "Home", root_path %></li>
+		  <li><%= link_to "Map", mapview_path,  :class => (controller.controller_name == "mapview" ? "active" : "")%></li>
+          <li><%= link_to "Entities", entities_path, :class => (controller.controller_name == "entities" ? "active" : "")%></li>
+          <li><%= link_to "Comments", comments_path, :class => (controller.controller_name == "comments" ? "active" : "")%></li>
+          <li><%= link_to "Categories", categories_path, :class => (controller.controller_name == "pages" && controller.action_name == "categories" ? "active" : "")%></li>
+		  <li><%= link_to "Data Management", data_management_path, :class => (controller.controller_name == "pages" && controller.action_name == "data_management" ? "active" : "") %></li>
         </ul>
-        <a href="#" class="buy-now">Map</a>
+
       </div>
       <div class="cl">&nbsp;</div>
       <!--<div class="search">

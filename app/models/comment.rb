@@ -32,9 +32,6 @@ class Comment < ActiveRecord::Base
 
     if self.entity_id != -1
       @counter = EntityCategoryCounter.find_by_entity_id_and_comment_category_id self.entity_id, self.category_id
-      puts "---------------------------"
-      puts self.entity_id
-      puts self.category_id
       if @counter.nil?
         categories = CommentCategory.find :all, :order=> 'created_at'
         categories.each do |category|
@@ -45,7 +42,6 @@ class Comment < ActiveRecord::Base
           :important_tag => false)
         end
         @counter = EntityCategoryCounter.find_by_entity_id_and_comment_category_id self.entity_id, self.category_id
-        p @counter
       end
 
       counts = @counter.counter + 1

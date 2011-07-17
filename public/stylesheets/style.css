@@ -40,7 +40,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #navigation ul li a { float: left; display: inline; height: 22px; color: #767670; font-size: 14px; line-height: 23px; font-family: "Lucida Sans", Arial, Sans-serif; padding-left: 10px; }
 #navigation ul li a span { padding-right: 16px; }
 #navigation ul li a:hover,
-#navigation ul li a.active { color: #000; text-decoration: none; }
+#navigation ul li a.active { color: #B80000; text-decoration: none; }
 #navigation ul li a.hover,
 #navigation ul li a.hover span.link { float: left; display: inline;  color: #000; background: url(../images/nav-hover.gif) no-repeat 0 0;  }
 #navigation ul li a.hover { z-index: 10; }
@@ -59,7 +59,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #navigation ul li .dd-holder .dd-holder { top: -5px; left: 100%; }
 #navigation ul li a .hide { position: absolute; top:  19px; left:4px; height: 3px; display: none; background: #fff !important; padding: 0; z-index: 10; overflow: hidden; }
 #navigation .map-view-button { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
-#navigation .buy-now { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
+.temp { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 
 .search { position: absolute; top: 0;  right: 0; width: 191px; height: 26px; display: block; background: url(../images/search-bg.gif) no-repeat 0 0; padding: 1px 0 0 5px; }
 .search .field { float: left; display: inline; width: 155px; height: 21px; background: url(../images/search-field-bg.gif) no-repeat 0 0; }
@@ -142,7 +142,7 @@ h1#logo a { display: block; height: 90px; background: url(../images/dmilogo.jpg)
 #navigation-mapview ul li .dd-holder .dd-holder { top: -5px; left: 100%; }
 #navigation-mapview ul li a .hide { position: absolute; top:  19px; left:4px; height: 3px; display: none; background: #fff !important; padding: 0; z-index: 10; overflow: hidden; }
 #navigation-mapview .map-view-button { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
-#navigation-mapview .buy-now { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
+#navigation-mapview .active { float: left; display: inline; width: 99px; height: 34px; background: url(../images/buy-now.gif) no-repeat 0 0; font-size: 14px; color: #fff;  text-align: center; line-height: 32px; font-family: "Lucida Sans Demibold Roman", Arial, Sans-serif; }
 
 #mapview {background-color: #4C4C4C; height: 100%}
 #iconinstruction {position: absolute; top: 7px; left: 10px; bottom: 0px}

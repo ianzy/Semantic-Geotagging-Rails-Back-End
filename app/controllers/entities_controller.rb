@@ -1,7 +1,9 @@
 class EntitiesController < ApplicationController
-#  layout 'application'
-
-before_filter :require_user
+  layout 'entities', :except => :index
+  # layout 'application', :only => :index
+  
+  before_filter :require_user
+  before_filter :require_admin, :except => [:show, :index]
   # GET /entities
   # GET /entities.xml
   def index

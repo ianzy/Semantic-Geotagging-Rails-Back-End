@@ -1,4 +1,5 @@
 class ResponseCategoriesController < ApplicationController
+  before_filter :require_admin
   # GET /response_categories
   # GET /response_categories.xml
   def index

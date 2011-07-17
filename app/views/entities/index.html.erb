@@ -1,40 +1,107 @@
-<div class="box">
-  <div class="box-head">
-    Listing entities
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Semantic Geotagging</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<%= stylesheet_link_tag 'style' %>
+
+</head>
+<body>
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <div id="cmudmi">
+      <h1 id="cmu">Carnegie Mellon University</h1>
+      <h1 id="dmi">Disaster Management Initiative</h1>
+    </div>
+      <div id="navigation">
+        <ul>
+          	<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Map", mapview_path,  :class => (controller.controller_name == "mapview" ? "active" : "")%></li>
+	        <li><%= link_to "Entities", entities_path, :class => (controller.controller_name == "entities" ? "active" : "")%></li>
+	        <li><%= link_to "Comments", comments_path, :class => (controller.controller_name == "comments" ? "active" : "")%></li>
+	        <li><%= link_to "Categories", categories_path, :class => (controller.controller_name == "pages" && controller.action_name == "categories" ? "active" : "")%></li>
+        </ul>
+
+      </div>
+      <div class="cl">&nbsp;</div>
+      <!--<div class="search">
+              <form action="#" method="post">
+                      <span class="field">
+                              <input type="text" class="blink" value="Search" title="Search" />
+                      </span>
+                      <input type="submit" class="search-btn notext" value="Submit" />
+              </form>
+      </div>-->
   </div>
-  <div class="table">
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Icon uri</th>
-    <th>Icon name</th>
-    <th>Location</th>
-    <th>Lat</th>
-    <th>Lng</th>
-    <th>Actions</th>
-    
-  </tr>
-
-<% @entities.each do |entity| %>
-  <tr>
-    <td><%=h entity.id%></td>
-    <td><%=h entity.title %></td>
-    <td><%=h entity.description %></td>
-    <td><%=h entity.icon_uri %></td>
-    <td><%=h entity.icon_name %></td>
-    <td><%=h entity.location %></td>
-    <td><%=h entity.lat %></td>
-    <td><%=h entity.lng %></td>
-    <td><%= link_to 'Show', entity %> |
-    <%= link_to 'Edit', edit_entity_path(entity) %> |
-    <%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
 </div>
-</div>
-<br />
+<!-- End Header -->
+<!-- Main -->
+<div id="main">
+	<div class="shell">
+          <div class="box">
+		  <div class="box-head">
+		    Listing entities
+		  </div>
+		  <div class="table">
+		<table>
+		  <tr>
+		    <th>ID</th>
+		    <th>Title</th>
+		    <th>Description</th>
+		    <th>Icon uri</th>
+		    <th>Icon name</th>
+		    <th>Location</th>
+		    <th>Lat</th>
+		    <th>Lng</th>
+		    <th>Actions</th>
 
-<%= link_to 'New entity', new_entity_path %>
+		  </tr>
+
+		<% @entities.each do |entity| %>
+		  <tr>
+		    <td><%=h entity.id%></td>
+		    <td><%=h entity.title %></td>
+		    <td><%=h entity.description %></td>
+		    <td><%=h entity.icon_uri %></td>
+		    <td><%=h entity.icon_name %></td>
+		    <td><%=h entity.location %></td>
+		    <td><%=h entity.lat %></td>
+		    <td><%=h entity.lng %></td>
+		    <td><%= link_to 'Show', entity %> |
+		    <%= link_to 'Edit', edit_entity_path(entity) %> |
+		    <%= link_to 'Destroy', entity, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+		</div>
+		</div>
+		<br />
+
+		<%= link_to 'New entity', new_entity_path %>
+          <div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+	<div class="shell">
+		<p class="left">CMU SV, DMI, Semantic Geotagging, Ian Zhang</p>
+		<p class="right">
+			<a href="#">Home</a>
+			<span>|</span>
+		    <a href="#">Entities</a>
+		    <span>|</span>
+		    <a href="#">Responses</a>
+		    <span>|</span>
+		    <a href="#">Map</a>
+		    <span>|</span>
+		    <a href="#">Contact Us</a>
+	    </p>
+	    <div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- Footer -->
+</body>
+</html>

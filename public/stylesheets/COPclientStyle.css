@@ -33,3 +33,12 @@ a img { border: 0; }
 .comment-item-time {float: right}
 .comment-item-content {font-size: 20px; }
 .comment-item-counter {font-size: 14px; }
+
+
+.table {}
+.table th{ background:#fffdfa url(images/th.gif) repeat-x 0 0; color:#818181; text-align: left; padding:7px 10px; border-bottom:solid 1px #d2d1cb;}
+.table td{ background:#fbfcfc;  border-bottom:solid 1px #e0e0e0; padding:8px 10px; }
+.table tr.odd td{ background:#f8f8f8; }
+.table tr:hover td{ background:#fff9e1; }
+.table a.ico{ }
+.fieldclass, .button { -moz-border-radius:4px; -webkit-border-radius:4px; }

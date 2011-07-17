@@ -33,9 +33,28 @@ ActionController::Routing::Routes.draw do |map|
     :controller => "api",
     :action => "create_comment"
   # end of the api routes
-
+  
+  map.clear_database "data_management/delete_all",
+    :conditions => { :method => :delete},
+    :controller => "data_management", 
+    :action => "delete_all"
+  
+  map.categories "pages/categories",
+    :conditions => { :method => :get},
+    :controller => "pages", 
+    :action => "categories"
+    
+  map.data_management "pages/data_management",
+    :conditions => { :method => :get},
+    :controller => "pages", 
+    :action => "data_management"
+    
+  map.mapview "mapview",
+    :conditions => { :method => :get},
+    :controller => "mapview", 
+    :action => "index"
   map.resource :user_session
-  map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
+  map.root :controller => "entities", :action => "index" # optional, this just sets the root route
 
   map.resource :account, :controller => "users"
   map.resources :users

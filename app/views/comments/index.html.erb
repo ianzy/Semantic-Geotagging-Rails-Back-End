@@ -1,9 +1,16 @@
 <% content_for :header_content do %>
+  <% unless @category.nil? %>
   <%= link_to(image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
   <div id="header-text">
     <%=h @category.name %>
   </div>
   <%= link_to(image_tag("/images/home_image.png", {:alt => 'example', :id=>"header-img-home"}), {:controller=>'entities', :action => 'show', :id => session[:home_entity_id]}) %>
+  <% else %>
+	<%= link_to image_tag("/images/back_image.png", {:alt => 'example', :id=>"header-img-back"}), root_path %>
+	<div id="header-text">
+	    Carnegie Mellon University
+	</div>
+  <% end %>
 <% end %>
 
 <% @comments.each do |comment| %>

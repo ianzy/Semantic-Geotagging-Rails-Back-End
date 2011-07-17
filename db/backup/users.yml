@@ -1,0 +1,41 @@
+--- 
+- single_access_token: tp1iXhoks2YriG40qCnd
+  last_request_at: 2011-07-17 22:39:47 Z
+  created_at: 2010-11-30 10:56:15 Z
+  crypted_password: a4ce1fd4341d2ec7e87ce36c6bb9baf944564ae7a0b1a21bb6cd98df8b4c093d0b127a81067b8ced2b4cef759719658b33b7624619c5ca5ef091098454af8f05
+  updated_at: 2011-07-17 22:39:47 Z
+  perishable_token: DGIiR4RTtMYCuUsgKrEZ
+  role: admin
+  id: 1
+  failed_login_count: 0
+  current_login_ip: 127.0.0.1
+  current_entity_time: 2010-10-08 07:59:46 Z
+  password_salt: l7607emAOo86PuBXrO3
+  current_login_at: 2011-07-17 21:42:36 Z
+  persistence_token: a25755940e81a51ac9bdff1dde44e4e144001316d221f3bd657e4881fb08cd2a479496d0d57fd9f3189563b59395eea6db114c12fd135ae9edc79915d4995f7d
+  login_count: 10
+  last_login_ip: 127.0.0.1
+  user_image: http://selfsolved.com/images/icons/default_user_icon_128.png
+  login: demo
+  last_login_at: 2011-07-17 19:42:54 Z
+  email: demo@demo.com
+- single_access_token: zGQZc8PzELKG4GrBLG2
+  last_request_at: 2011-01-07 06:21:55 Z
+  created_at: 2011-01-07 06:21:55 Z
+  crypted_password: ea597f913ba0c7332be452be20e7e1dccbe38424d71ed8bf1225fa2705b0e9534c86d4467080d853ad1dcac316d4a774517bce49d9037ec7a368807b0a08f714
+  updated_at: 2011-01-07 06:21:55 Z
+  perishable_token: fyspF2UMSo8vZpdEwngQ
+  role: 
+  id: 2
+  failed_login_count: 0
+  current_login_ip: 127.0.0.1
+  current_entity_time: 2010-10-08 07:59:46 Z
+  password_salt: 5g1lQTwD0WWLRDgOZuF
+  current_login_at: 2011-01-07 06:21:55 Z
+  persistence_token: b679c4fcaacb11951b544af21849ad778dbb9bfd11e3b168ee9db35f530360895a8e0b0956691d85f92dc8522257ebbce81fe4851ca63ce784494895d13435c7
+  login_count: 1
+  last_login_ip: 
+  user_image: http://selfsolved.com/images/icons/default_user_icon_128.png
+  login: ian
+  last_login_at: 
+  email: test@test.com

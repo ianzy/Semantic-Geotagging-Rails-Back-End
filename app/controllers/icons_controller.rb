@@ -1,4 +1,5 @@
 class IconsController < ApplicationController
+  before_filter :require_admin
   # GET /icons
   # GET /icons.xml
   def index
