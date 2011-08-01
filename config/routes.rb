@@ -39,6 +39,11 @@ ActionController::Routing::Routes.draw do |map|
     :controller => "data_management", 
     :action => "delete_all"
   
+  map.restore_database   "data_management/restore",
+    :conditions => { :method => :get},
+    :controller => "data_management", 
+    :action => "restore"
+  
   map.categories "pages/categories",
     :conditions => { :method => :get},
     :controller => "pages", 
