@@ -26,6 +26,14 @@ class DataManagementController < ApplicationController
     redirect_to(root_path)
   end
   
+  def reset_time
+    Comment.all.each do |comment|
+      comment.created_at = Time.now
+      comment.save!
+    end
+    redirect_to(root_path)
+  end
+  
   def delete_all
     interesting_tables.each do |tbl|
       next if tbl.nil?

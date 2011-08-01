@@ -43,7 +43,12 @@ ActionController::Routing::Routes.draw do |map|
     :conditions => { :method => :get},
     :controller => "data_management", 
     :action => "restore"
-  
+
+  map.reset_time_database   "data_management/reset_time",
+    :conditions => { :method => :get},
+    :controller => "data_management", 
+    :action => "reset_time"  
+
   map.categories "pages/categories",
     :conditions => { :method => :get},
     :controller => "pages", 
