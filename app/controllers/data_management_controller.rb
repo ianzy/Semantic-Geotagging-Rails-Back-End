@@ -4,8 +4,9 @@ class DataManagementController < ApplicationController
     # dir = RAILS_ROOT + '/db/backup'
     # FileUtils.mkdir_p(dir)
     # FileUtils.chdir(dir)
-  
-    interesting_tables.each do |tbl|
+    tables = ActiveRecord::Base.connection.tables.sort
+    tables.delete("schema_migrations")
+    tables.each do |tbl|
       tbl = "EntityCategoryCounter" if tbl == "comment_categories_entities"
       tbl = "CommentCategoryCounter" if tbl == "comments_response_categories"
       klass = tbl.classify.constantize
