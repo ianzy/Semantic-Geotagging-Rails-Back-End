@@ -1,2 +1,46 @@
---- []
-
+--- 
+- name: firetruckicon
+  created_at: 2011-08-01 20:33:32 Z
+  updated_at: 2011-08-01 20:33:32 Z
+  url: http://geotagging.heroku.com/images/icons/FireTruckIcon.png
+  id: 1
+- name: firestation
+  created_at: 2011-08-01 20:33:49 Z
+  updated_at: 2011-08-01 20:33:49 Z
+  url: http://geotagging.heroku.com/images/icons/FireStation_v2.png
+  id: 2
+- name: landslide
+  created_at: 2011-08-01 20:34:06 Z
+  updated_at: 2011-08-01 20:34:06 Z
+  url: http://geotagging.heroku.com/images/icons/Landslide.png
+  id: 3
+- name: earthquake
+  created_at: 2011-08-01 20:34:22 Z
+  updated_at: 2011-08-01 20:34:22 Z
+  url: http://geotagging.heroku.com/images/icons/Earthquake.png
+  id: 4
+- name: crime
+  created_at: 2011-08-01 20:34:37 Z
+  updated_at: 2011-08-01 20:34:37 Z
+  url: http://geotagging.heroku.com/images/icons/Crime.png
+  id: 5
+- name: ambulanceicon
+  created_at: 2011-08-01 20:34:52 Z
+  updated_at: 2011-08-01 20:34:52 Z
+  url: http://geotagging.heroku.com/images/icons/AmbulanceIcon.png
+  id: 6
+- name: explosionicon
+  created_at: 2011-08-01 20:35:07 Z
+  updated_at: 2011-08-01 20:35:07 Z
+  url: http://geotagging.heroku.com/images/icons/ExplosionIcon.png
+  id: 7
+- name: gasleak
+  created_at: 2011-08-01 20:35:23 Z
+  updated_at: 2011-08-01 20:35:23 Z
+  url: http://geotagging.heroku.com/images/icons/Nuclear.png
+  id: 8
+- name: fireicon
+  created_at: 2011-08-01 20:35:39 Z
+  updated_at: 2011-08-01 20:35:39 Z
+  url: http://geotagging.heroku.com/images/icons/FireIcon_small.png
+  id: 9

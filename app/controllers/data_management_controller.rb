@@ -1,7 +1,28 @@
 class DataManagementController < ApplicationController
   before_filter :require_admin
   def restore
+    dir = RAILS_ROOT + '/db/backup'
+    FileUtils.mkdir_p(dir)
+    FileUtils.chdir(dir)
+  
+    interesting_tables.each do |tbl|
+      tbl = "EntityCategoryCounter" if tbl == "comment_categories_entities"
+      tbl = "CommentCategoryCounter" if tbl == "comments_response_categories"
+      klass = tbl.classify.constantize
+      klass.delete_all
+      tbl = "comment_categories_entities" if tbl == "EntityCategoryCounter"
+      tbl = "comments_response_categories" if tbl == "CommentCategoryCounter"
+      
+      ActiveRecord::Base.transaction do 
+      
+        puts "Loading #{tbl}..."
+        YAML.load_file("#{tbl}.yml").each do |fixture|
+          ActiveRecord::Base.connection.execute "INSERT INTO #{tbl} (#{fixture.keys.join(",")}) VALUES (#{fixture.values.collect { |value| ActiveRecord::Base.connection.quote(value) }.join(",")})", 'Fixture Insert'
+        end        
+      end
+    end
     
+    redirect_to(root_path)
   end
   
   def delete_all

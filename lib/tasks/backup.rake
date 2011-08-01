@@ -30,7 +30,6 @@ namespace :db do
     end
   
     task :read => [:environment, 'db:schema:load'] do 
-
       dir = RAILS_ROOT + '/db/backup'
       FileUtils.mkdir_p(dir)
       FileUtils.chdir(dir)

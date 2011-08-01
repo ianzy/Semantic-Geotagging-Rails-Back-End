@@ -1,541 +1,61 @@
 --- 
-- created_at: 2011-01-13 03:27:19 Z
-  image_url: "1"
-  updated_at: 2011-04-17 20:52:19 Z
-  entity_id: 1
-  id: 1
-  user_id: 1
+- created_at: 2011-08-01 18:23:38 Z
+  image_url: 
+  updated_at: 2011-08-01 18:23:38 Z
+  entity_id: 53
+  id: 53
+  user_id: 7
   type: 
-  category_id: 1
-  important_tag: true
-  description: this is a comment for entity
-  comments_counter: 19
-  comment_id: -1
-- created_at: 2011-01-13 03:28:31 Z
-  image_url: "1"
-  updated_at: 2011-01-13 03:28:31 Z
-  entity_id: -1
-  id: 2
-  user_id: 1
-  type: 
-  category_id: -1
+  category_id: 5
   important_tag: false
-  description: this is a comment for a comment
+  description: "We just arrived at Building 23. We see smoke coming from the left rear of the building but haven\xE2\x80\x99t localized the fire yet."
+  comments_counter: 0
+  comment_id: -1
+- created_at: 2011-08-01 18:24:00 Z
+  image_url: 
+  updated_at: 2011-08-01 18:24:00 Z
+  entity_id: 53
+  id: 54
+  user_id: 7
+  type: 
+  category_id: 5
+  important_tag: false
+  description: Entered building. Dense smoke from lower stairway indicates fire is in basement.
   comments_counter: 1
-  comment_id: 1
-- created_at: 2011-01-14 00:14:03 Z
-  image_url: "1"
-  updated_at: 2011-01-14 00:15:25 Z
-  entity_id: 1
-  id: 3
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: this is another comment, but maybe much longer with some wordy descriptions and it looks really bad....
-  comments_counter: 0
   comment_id: -1
-- created_at: 2011-01-14 01:24:58 Z
+- created_at: 2011-08-01 20:25:09 Z
   image_url: 
-  updated_at: 2011-01-14 01:24:58 Z
-  entity_id: 
-  id: 4
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: works or not? that is a question
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-01-16 06:24:50 Z
-  image_url: 
-  updated_at: 2011-01-16 06:24:50 Z
-  entity_id: 
-  id: 5
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: try some new thing
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-01-16 06:25:42 Z
-  image_url: 
-  updated_at: 2011-01-16 06:25:42 Z
-  entity_id: 
-  id: 6
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: quick response
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-01-16 06:29:50 Z
-  image_url: 
-  updated_at: 2011-01-16 06:29:50 Z
-  entity_id: 
-  id: 7
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: what?
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-01-27 18:17:42 Z
-  image_url: 
-  updated_at: 2011-01-27 18:17:42 Z
-  entity_id: 
-  id: 8
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: This fire is really bad!
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-13 08:13:49 Z
-  image_url: 
-  updated_at: 2011-02-13 08:13:49 Z
-  entity_id: 
-  id: 9
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: fdsafdsa
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-13 09:33:46 Z
-  image_url: 
-  updated_at: 2011-02-13 09:33:46 Z
-  entity_id: 
-  id: 13
-  user_id: 
-  type: 
-  category_id: 
-  important_tag: false
-  description: 
-  comments_counter: 0
-  comment_id: 
-- created_at: 2011-02-15 06:51:18 Z
-  image_url: 
-  updated_at: 2011-02-15 06:51:18 Z
-  entity_id: 14
-  id: 14
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: testestestestseteststs
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 06:54:47 Z
-  image_url: 
-  updated_at: 2011-02-15 06:54:47 Z
-  entity_id: 14
-  id: 15
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: what the fuck? succeed?
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 06:55:06 Z
-  image_url: 
-  updated_at: 2011-02-15 06:55:06 Z
-  entity_id: 14
-  id: 16
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: that's some thing i am not expecting
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 06:57:30 Z
-  image_url: 
-  updated_at: 2011-02-15 06:57:30 Z
-  entity_id: 14
-  id: 17
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: damn failed once
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 06:58:24 Z
-  image_url: 
-  updated_at: 2011-02-15 06:58:24 Z
-  entity_id: 14
-  id: 18
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: failed twice
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 06:58:44 Z
-  image_url: 
-  updated_at: 2011-02-15 06:58:44 Z
+  updated_at: 2011-08-01 20:25:09 Z
   entity_id: -1
-  id: 19
-  user_id: -1
+  id: 55
+  user_id: 7
   type: 
-  category_id: 1
+  category_id: 7
   important_tag: false
-  description: test once
+  description: Suggest fighting fire with water from outside of building
   comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 06:59:06 Z
+  comment_id: 54
+- created_at: 2011-08-01 20:27:04 Z
   image_url: 
-  updated_at: 2011-02-15 06:59:06 Z
-  entity_id: -1
-  id: 20
-  user_id: -1
+  updated_at: 2011-08-01 20:27:04 Z
+  entity_id: 54
+  id: 56
+  user_id: 8
   type: 
-  category_id: 4
+  category_id: 5
   important_tag: false
-  description: it's fucking awesome
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 07:00:49 Z
-  image_url: 
-  updated_at: 2011-02-15 07:00:49 Z
-  entity_id: -1
-  id: 21
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: anything in the data base?
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 07:18:18 Z
-  image_url: 
-  updated_at: 2011-02-15 07:18:18 Z
-  entity_id: 14
-  id: 22
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fdsafdsafdsa
+  description: Detected fire in back of Building 17.
   comments_counter: 0
   comment_id: -1
-- created_at: 2011-02-15 07:18:33 Z
+- created_at: 2011-08-01 20:27:19 Z
   image_url: 
-  updated_at: 2011-02-15 07:18:33 Z
-  entity_id: 14
-  id: 23
-  user_id: -1
+  updated_at: 2011-08-01 20:27:19 Z
+  entity_id: 54
+  id: 57
+  user_id: 8
   type: 
-  category_id: 1
+  category_id: 5
   important_tag: false
-  description: fdsafdsa
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:19:24 Z
-  image_url: 
-  updated_at: 2011-02-15 07:19:24 Z
-  entity_id: -1
-  id: 24
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fdsafdsafdsa
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 07:20:30 Z
-  image_url: 
-  updated_at: 2011-02-15 07:20:30 Z
-  entity_id: 14
-  id: 25
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: rrerree
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:20:34 Z
-  image_url: 
-  updated_at: 2011-02-15 07:20:34 Z
-  entity_id: 14
-  id: 26
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: vvdvfdvfd
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:20:46 Z
-  image_url: 
-  updated_at: 2011-02-15 07:20:46 Z
-  entity_id: -1
-  id: 27
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: fdavsvfd
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 07:20:53 Z
-  image_url: 
-  updated_at: 2011-02-15 07:20:53 Z
-  entity_id: -1
-  id: 28
-  user_id: -1
-  type: 
-  category_id: 4
-  important_tag: false
-  description: vfdavdsavsa
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-02-15 07:24:19 Z
-  image_url: 
-  updated_at: 2011-02-15 07:24:19 Z
-  entity_id: 14
-  id: 29
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: jnjkbkjb
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:39:33 Z
-  image_url: 
-  updated_at: 2011-02-15 07:39:33 Z
-  entity_id: 14
-  id: 30
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fdsafdsa
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:43:19 Z
-  image_url: 
-  updated_at: 2011-02-15 07:43:19 Z
-  entity_id: 14
-  id: 31
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: fdsafdsafdsafd
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:43:37 Z
-  image_url: 
-  updated_at: 2011-02-15 07:43:37 Z
-  entity_id: 14
-  id: 32
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: ffvfvfevfe
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:45:11 Z
-  image_url: 
-  updated_at: 2011-02-15 07:45:11 Z
-  entity_id: 14
-  id: 33
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: vdsvfdsvfd
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-02-15 07:45:20 Z
-  image_url: 
-  updated_at: 2011-02-15 07:45:20 Z
-  entity_id: -1
-  id: 34
-  user_id: -1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: dsavdvdfs
-  comments_counter: 0
-  comment_id: 0
-- created_at: 2011-02-15 08:03:59 Z
-  image_url: 
-  updated_at: 2011-02-15 08:03:59 Z
-  entity_id: 14
-  id: 35
-  user_id: -1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: ttestesdsffdsfds
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-03-05 00:44:30 Z
-  image_url: 
-  updated_at: 2011-03-05 00:44:30 Z
-  entity_id: 
-  id: 36
-  user_id: 1
-  type: 
-  category_id: 
-  important_tag: false
-  description: 
-  comments_counter: 0
-  comment_id: 2
-- created_at: 2011-03-19 02:57:55 Z
-  image_url: "1"
-  updated_at: 2011-03-19 02:57:55 Z
-  entity_id: 1
-  id: 38
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: "1"
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-03-19 03:01:00 Z
-  image_url: "1"
-  updated_at: 2011-03-19 03:01:00 Z
-  entity_id: 1
-  id: 39
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: "1"
-  comments_counter: 2
-  comment_id: 1
-- created_at: 2011-03-19 03:04:41 Z
-  image_url: "1"
-  updated_at: 2011-03-19 03:04:41 Z
-  entity_id: 1
-  id: 40
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: "1"
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-03-19 03:10:59 Z
-  image_url: "1"
-  updated_at: 2011-03-19 03:10:59 Z
-  entity_id: 1
-  id: 41
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: "1"
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-03-19 03:11:22 Z
-  image_url: "1"
-  updated_at: 2011-03-19 03:11:22 Z
-  entity_id: 1
-  id: 42
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: sfdsafdsafdsa
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-03-19 03:16:32 Z
-  image_url: "1"
-  updated_at: 2011-03-19 03:16:32 Z
-  entity_id: -1
-  id: 43
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: "1"
-  comments_counter: 0
-  comment_id: 1
-- created_at: 2011-04-03 22:07:57 Z
-  image_url: "2"
-  updated_at: 2011-04-03 22:07:57 Z
-  entity_id: 1
-  id: 45
-  user_id: 1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: test
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-04-17 21:49:13 Z
-  image_url: fdsa
-  updated_at: 2011-04-17 21:50:25 Z
-  entity_id: 36
-  id: 46
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fjdklsajfkl;dsadfklsa
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-04-17 21:49:57 Z
-  image_url: fdsjalk
-  updated_at: 2011-04-17 21:49:57 Z
-  entity_id: 36
-  id: 47
-  user_id: 1
-  type: 
-  category_id: 2
-  important_tag: false
-  description: fjdsklafjdlksajflkdsajlkf
-  comments_counter: 0
-  comment_id: -1
-- created_at: 2011-04-17 21:51:06 Z
-  image_url: fdjskl
-  updated_at: 2011-04-17 21:51:06 Z
-  entity_id: -1
-  id: 48
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fdslkfjlsdk
-  comments_counter: 0
-  comment_id: 39
-- created_at: 2011-04-17 21:51:28 Z
-  image_url: fdsafds
-  updated_at: 2011-04-17 21:51:28 Z
-  entity_id: -1
-  id: 49
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fjdskalfjd;sadfkl;sajfld
-  comments_counter: 0
-  comment_id: 39
-- created_at: 2011-06-13 08:00:31 Z
-  image_url: 
-  updated_at: 2011-06-13 08:00:31 Z
-  entity_id: 1
-  id: 52
-  user_id: 1
-  type: 
-  category_id: 1
-  important_tag: false
-  description: fdsafdsa
+  description: Entered building and extinguished small office fire with wall extinguisher.
   comments_counter: 0
   comment_id: -1

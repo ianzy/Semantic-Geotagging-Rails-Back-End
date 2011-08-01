@@ -18,10 +18,11 @@
       <div id="navigation">
         <ul>
           	<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Map", mapview_path,  :class => (controller.controller_name == "mapview" ? "active" : "")%></li>
-	        <li><%= link_to "Entities", entities_path, :class => (controller.controller_name == "entities" ? "active" : "")%></li>
-	        <li><%= link_to "Comments", comments_path, :class => (controller.controller_name == "comments" ? "active" : "")%></li>
-	        <li><%= link_to "Categories", categories_path, :class => (controller.controller_name == "pages" && controller.action_name == "categories" ? "active" : "")%></li>
+			  <li><%= link_to "Map", mapview_path,  :class => (controller.controller_name == "mapview" ? "active" : "")%></li>
+	          <li><%= link_to "Entities", entities_path, :class => (controller.controller_name == "entities" ? "active" : "")%></li>
+	          <li><%= link_to "Comments", comments_path, :class => (controller.controller_name == "comments" ? "active" : "")%></li>
+	          <li><%= link_to "Categories", categories_path, :class => (controller.controller_name == "pages" && controller.action_name == "categories" ? "active" : "")%></li>
+			  <li><%= link_to "Data Management", data_management_path, :class => (controller.controller_name == "pages" && controller.action_name == "data_management" ? "active" : "") %></li>
         </ul>
 
       </div>
