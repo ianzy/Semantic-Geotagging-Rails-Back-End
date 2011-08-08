@@ -32,6 +32,10 @@ ActionController::Routing::Routes.draw do |map|
     :conditions => { :method => :post},
     :controller => "api",
     :action => "create_comment"
+  map.apiverifyuserinfo "api/verify_user_information.:format",
+    :conditions => { :method => :post},
+    :controller => "api",
+    :action => "verify_user_information"
   # end of the api routes
   
   map.clear_database "data_management/delete_all",
